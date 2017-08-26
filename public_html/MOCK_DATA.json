@@ -1,12 +1,23 @@
 {
+"eval_function":"return (obj.gender === 'Male')",
 "test_data":[
-{"id":1,"first_name":"Kyle","last_name":"Britnell","email":"kbritnell0@ftc.gov","gender":"Female","ip_address":"212.179.29.40"},
+{"first_name":"Kyle","last_name":"Britnell","email":"kbritnell0@ftc.gov","gender":"Female","ip_address":"212.179.29.40"},
 
-{"id":2,"first_name":"Lauren","last_name":"Grimshaw","email":"lgrimshaw1@statcounter.com","gender":"Male","ip_address":"68.239.130.187"},
+{"first_name":"Lauren","last_name":"Grimshaw","email":"lgrimshaw1@aol.com","gender":"Male","ip_address":"68.239.130.187"},
 
-{"id":-3,"first_name":"Dahlia","last_name":"Petasch","email":"dpetasch2@posterous.com","gender":"Female","ip_address":"64.170.44.240"},
+{"first_name":"Dahlia","last_name":"Petasch","email":"dpetasch2@posterous.com","gender":"Female","ip_address":"64.170.44.240"},
 
-{"id":4,"first_name":"Jade","last_name":"Cuningham","email":"jcuningham3@altervista.org","gender":"Female","ip_address":"63.17.187.180"},
+{"first_name":"Jade","last_name":"Cuningham","email":"jcuningham3@altervista.org","gender":"Female","ip_address":"63.17.187.180"},
 
-{"id":5,"first_name":"Colette","last_name":"Gerrad","email":"cgerrad4@nsw.gov.au","gender":"Female","ip_address":"211.120.6.204"}]
+{"first_name":"Colette","last_name":"Gerrad","email":"cgerrad4@nsfw.gov.au","gender":"Female","ip_address":"211.120.6.204"},
+
+{"first_name":"Billy","last_name":"Bradshaw","email":"kbritnell0@ftc.gov","gender":"Male","ip_address":"192.168.1.42"},
+
+{"first_name":"John","last_name":"Jacobson","email":"2j.navy.mil@gov.us","gender":"Male","ip_address":"110.206.30.7"},
+
+{"first_name":"Emma","last_name":"Peitrovich","email":"unicorn@fantasy.com","gender":"Female","ip_address":"42.69.42.69"},
+
+{"first_name":"Laquesha","last_name":"Smith","email":"babygirl@betv.com","gender":"Female","ip_address":"124.15.18.43"},
+
+{"first_name":"Otto","last_name":"VonBismark","email":"automan@yahoo.com","gender":"Female","ip_address":"186.45.120.21"}]
 }

@@ -42,6 +42,8 @@
                 layoutSize = (Math.min(width, height)) / 4,
                 emojiSize = layoutSize / 8,
                 transitTime = 20000;
+        
+        var evalFunction = function(){return false;};
 
         // D3 Bubble Chart 
 
@@ -86,6 +88,7 @@
             //processData tallies the layout size while it spins
             setVOffset();
             var meta = false;
+            var object = JSON.parse(m);
             var jsonData = processData(m);
             var cluster = d3.layout.pack()
                     .size([layoutSize, layoutSize])
@@ -175,7 +178,7 @@
                     .style("fill", "white")
                     .style("opacity", 0).on('click', function (d) { //TO SAVE MY LIFE I CAN'T FIGURE OUT HOW TO REMOVE THESE AFTER CLICK... WORKAROUND IS TO HIDE THEM OFF-SCREEN -- DATA WILL REALLY PILE UP THOUGH!!!
                 //move to the right when clicked
-                processClick(true);
+                processClick(evalFunction(object));
                 chart.selectAll("g")
                         .data(nodes, function (d) {
                             console.log("data d.uid selected: " + d.uid);
@@ -320,6 +323,7 @@
         request.open("GET", "MOCK_DATA.json", false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
+        evalFunction = new Function("obj",JSON_object.eval_function);
         var test_data = [];
         test_data = JSON_object.test_data;
         test_data.forEach(function (td, index) {
