@@ -85,6 +85,7 @@
         function drawCluster(m) {
             //processData tallies the layout size while it spins
             setVOffset();
+            var meta = false;
             var jsonData = processData(m);
             var cluster = d3.layout.pack()
                     .size([layoutSize, layoutSize])
@@ -97,20 +98,17 @@
             var nodes = cluster.nodes(jsonData)
                     .filter(function (d) {
                         if (!d.children) {
-                            return !d.children;
+                            return true;
                         }
                     }); // filter out the root object
+                    
+                    console.log("meta: " + meta );
 
             //DATA JOIN: assign new data to existing DOM 
             var vis = chart.selectAll("g")
                     .data(nodes, function (d) {
                         return d.uid;
-                    }).
-                    on('click', function (d) {
-                        processClick();
-                        d3.select(this).remove();
-                    }
-                    );
+                    });
 
             //UPDATE: //there is no UPDATE in this design
 
@@ -178,16 +176,11 @@
                     .style("opacity", 0).on('click', function (d) { //TO SAVE MY LIFE I CAN'T FIGURE OUT HOW TO REMOVE THESE AFTER CLICK... WORKAROUND IS TO HIDE THEM OFF-SCREEN -- DATA WILL REALLY PILE UP THOUGH!!!
                 //move to the right when clicked
                 processClick(true);
-                vis.transition("select")
-                        .duration(0)
-                        .attr("transform", function (d) {
-                            return 'translate(' + (d.x - width / 2) + ',' + (d.y - height / 2) + ')';
-                        })
-                        .remove();
-                //below never happens
-                //                    .transition("remove")
-                //                            .duration()
-                //                            .remove();
+                chart.selectAll("g")
+                        .data(nodes, function (d) {
+                            console.log("data d.uid selected: " + d.uid);
+                            return d.uid;
+                        }).remove();
             });
         }
 
@@ -196,8 +189,8 @@
 
         function processClick(hit) {
             console.log("click!");
-            if (hit == true) {
-                        g.append("svg:image")
+            if (hit === true) {
+                g.append("svg:image")
                         //.attr("xlink:href", "http://www.clker.com/cliparts/1/4/5/a/1331068897296558865Sitting%20Racoon.svg")
                         .attr("xlink:href", "Green_check.svg")
                         .attr("id", "feedback-1")
@@ -207,7 +200,7 @@
                         .attr("y", height / 4);
                 hits++;
             } else {
-                        g.append("svg:image")
+                g.append("svg:image")
                         .attr("xlink:href", "Red_x.svg")
                         .attr("id", "feedback-1")
                         .attr("width", height / 2)
@@ -219,7 +212,7 @@
             setTimeout(function () {
                 d3.select("#feedback-1").remove();
             }, 100);
-            
+
             document.getElementById('score').innerHTML =
                     "Score: " +
                     "<m style='color:red;'>" + misses + ": </m>" +
@@ -250,11 +243,11 @@
                     } else {
                         //only push on fields (not objects)
                         var size = circleSize(o[i]);
+                        var uid = Math.floor((1 + Math.random()) * 0x10000);
                         //layoutSize += size;
                         dataSet.push({name: i, className: getClassName(parentName), size: size
-                            , uid: (Math.floor((1 + Math.random()) * 0x10000)),
-                            vOffset: vOffset, clicked: false});
-                        console.log(parentName + "." + i + " : " + o[i] + " = " + size);
+                            , uid: (uid), vOffset: vOffset, clicked: false});
+                        console.log("uid: " + uid + "  " + parentName + "." + i + " : " + o[i] + " = " + size);
 
                     }
                 }
