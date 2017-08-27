@@ -25,7 +25,7 @@ var plugin = function(d3) {
 
             if(typeof f === 'function') {
                 return this._attr('xlink:href', function(d, i) {
-                    return 'https://twemoji.maxcdn.com/svg/' + emojiMap[f(d, i).toLowerCase()].toLowerCase() + '.svg';
+                    return 'https://twemoji.maxcdn.com/svg/' + emojiMap[f(d, i).toLowerCase()].toLowerCase().split('-',1) + '.svg';
                 })
             } else {
                 return this._attr('xlink:href', 'https://twemoji.maxcdn.com/svg/' + emojiMap[f.toLowerCase()].toLowerCase() + '.svg');
