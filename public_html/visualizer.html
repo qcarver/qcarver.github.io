@@ -34,16 +34,18 @@
     <script src="d3moji.js"></script>  
     <script>
         var width = window.innerWidth,
-                height = window.innerHeight * .8,
+                height = window.innerHeight,
                 maxRadius = 60,
                 vOffset = 0,
                 setupTime = 250,
                 minRadius = 5,
-                layoutSize = (Math.min(width, height)) / 4,
+                layoutSize = (Math.min(width, height)) / 3,
                 emojiSize = layoutSize / 8,
-                transitTime = 20000;
-        
-        var evalFunction = function(){return false;};
+                transitTime = 30000;
+
+        var evalFunction = function () {
+            return false;
+        };
 
         // D3 Bubble Chart 
 
@@ -72,20 +74,10 @@
                 .attr('width', width)
                 .attr('height', height);
 
-//        d3.select("body").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "purple");
-//
         var g = art.append("g");
-//
-//        canvas.font = "300px Helvetica Neue";
-//        canvas.textAlign = "center";
-//        canvas.lineJoin = "round";
-//
-//        canvas.clearRect(0, 0, width, height);
-//        canvas.fillText("Hello.", width / 2, height / 2 + 100);
-//        canvas.fill();
+
 
         function drawCluster(m) {
-            //processData tallies the layout size while it spins
             setVOffset();
             var meta = false;
             var object = JSON.parse(m);
@@ -104,8 +96,8 @@
                             return true;
                         }
                     }); // filter out the root object
-                    
-                    console.log("meta: " + meta );
+
+            console.log("meta: " + meta);
 
             //DATA JOIN: assign new data to existing DOM 
             var vis = chart.selectAll("g")
@@ -144,6 +136,7 @@
                         return "circle-" + d.uid;
                     });
 
+
             vis.append('emoji')
                     .attr('symbol', function (d) {
                         return emojiHash(d.name);
@@ -159,16 +152,46 @@
                         //return "translate(" + (-.75 * d.r) + "," + (-.75 * d.r) + ")";
                         return "translate(" + (-.5 * emojiSize) + "," + (-.5 * emojiSize) + ")";
                     });
+                    
+//            //draw rings for number size
+            for (var drawRing = 1; drawRing < 6;drawRing++) {
+                    vis.append('circle')
+                            .attr('r', function(d){
+                                return minRadius + drawRing;
+                                //newR = (d.r - minRadius) + drawRing;
+                                //d.toString(2)[(d.r - 1)-minRadius] == '1';
+                            })
+                            .style("stroke", function(d){
+                              return (d.toString(2)[(d.r - minRadius) - drawRing ] === '1')?"black":"none";
+                            })
+                      .style("stroke-width", 1)    // set the stroke width
+                              // set the line colour ..maybe make this bg
+                      .style("fill", "none");   
+                      
+                }
+            
+
+//            //draw rings for number size
+//            var sizeAsBinaryString = d.size.toString(2);
+//            for (var i = 0; i < sizeAsBinaryString.length; i++) {
+//                if (sizeAsBinaryString[length - i] === "1") {
+//                    vis.append('circle')
+//                            .attr('r', minRadius + (length - i))
+//                      .style("stroke-width", 1)    // set the stroke width
+//                        .style("stroke", "black")      // set the line colour ..maybe make this bg
+//                        .style("fill", "none");    
+//                }
+//            }
 
             //make an alpha mask to tint the emojis the same color as their clusters
             vis.append("use")
                     .attr("xlink:href", function (d) {
                         return "#circle-" + d.uid;
                     }).style("fill", "white")
-                    .style("opacity", 0.5);
-            //                .transition("clarify")
-            //                .duration(transitTime/4)
-            //                .style("opacity", 0);
+                    .style("opacity", 0.5)
+                    .transition("clarify")
+                    .duration(transitTime / 5)
+                    .style("opacity", 0);
 
             //this is the clickable region, transparent and bigger than the object
             vis.append("circle")
@@ -176,12 +199,10 @@
                         return d.r + 60; // bigger than radius of visible objects
                     })
                     .style("fill", "white")
-                    .style("opacity", 0).on('click', function (d) { //TO SAVE MY LIFE I CAN'T FIGURE OUT HOW TO REMOVE THESE AFTER CLICK... WORKAROUND IS TO HIDE THEM OFF-SCREEN -- DATA WILL REALLY PILE UP THOUGH!!!
-                //move to the right when clicked
+                    .style("opacity", 0).on('click', function (d) { 
                 processClick(evalFunction(object));
                 chart.selectAll("g")
                         .data(nodes, function (d) {
-                            console.log("data d.uid selected: " + d.uid);
                             return d.uid;
                         }).remove();
             });
@@ -220,12 +241,6 @@
                     "Score: " +
                     "<m style='color:red;'>" + misses + ": </m>" +
                     "<h style='color:green;'>" + hits + "</h>";
-            //the canvas way....
-
-//        d3.select("body").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "purple");
-
-
-
         }
 
         function processData(data) {
@@ -290,14 +305,15 @@
         }
 
         function circleSize(value) {
-            var d = (isNaN(value) ? value.length : value)
-            return Math.ceil(Math.min(maxRadius + Math.log10(d), Math.max(minRadius, d / 2)));
+            var d = (isNaN(value) ? value.length : value);
+            //return Math.ceil(Math.min(maxRadius + Math.log10(d), Math.max(minRadius, d / 2)));
+            return minRadius + Math.log2(d) + 1;
         }
 
         //////////////////////other utilities    
         function setVOffset() {
             //Rnd vertical offset for new group that differs from last vOffset
-            vOffset = ((Math.random() * ((height / 4) * 3)) + vOffset + (height / 8)) % height;
+            vOffset = (Math.random() * (height - layoutSize) + vOffset) % (height - layoutSize);
         }
 
 
@@ -323,16 +339,16 @@
         request.open("GET", "MOCK_DATA.json", false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
-        evalFunction = new Function("obj",JSON_object.eval_function);
+        evalFunction = new Function("obj", JSON_object.eval_function);
         var test_data = [];
         test_data = JSON_object.test_data;
         test_data.forEach(function (td, index) {
             setTimeout(function () {
                 objAsString = JSON.stringify(td);
                 drawCluster(objAsString);
-                console.log("sending " + objAsString + " in " + index * 2000 + " ms");
+                console.log("sending " + objAsString + " in " + index * (2000) + " ms");
             },
-                    index * 2000);
+                    index * transitTime / 8);
         }
         );
 
