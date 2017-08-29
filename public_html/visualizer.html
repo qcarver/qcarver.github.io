@@ -124,9 +124,12 @@
                     .remove()
                     ;
 
+            var currRadius = 0;
+
             // enter - only applies to incoming elements (once emptying data)	
             vis.append('circle')
                     .attr('r', function (d) {
+                        currRadius = d.r;
                         return d.r; //the radius circle pack thinks this should be
                     })
                     .attr('class', function (d) {
@@ -151,37 +154,21 @@
                     .attr("transform", function (d) {
                         //return "translate(" + (-.75 * d.r) + "," + (-.75 * d.r) + ")";
                         return "translate(" + (-.5 * emojiSize) + "," + (-.5 * emojiSize) + ")";
-                    });
-                    
-//            //draw rings for number size
-            for (var drawRing = 1; drawRing < 6;drawRing++) {
-                    vis.append('circle')
-                            .attr('r', function(d){
-                                return minRadius + drawRing;
-                                //newR = (d.r - minRadius) + drawRing;
-                                //d.toString(2)[(d.r - 1)-minRadius] == '1';
-                            })
-                            .style("stroke", function(d){
-                              return (d.toString(2)[(d.r - minRadius) - drawRing ] === '1')?"black":"none";
-                            })
-                      .style("stroke-width", 1)    // set the stroke width
-                              // set the line colour ..maybe make this bg
-                      .style("fill", "none");   
-                      
-                }
-            
+                    });            
 
 //            //draw rings for number size
-//            var sizeAsBinaryString = d.size.toString(2);
-//            for (var i = 0; i < sizeAsBinaryString.length; i++) {
-//                if (sizeAsBinaryString[length - i] === "1") {
-//                    vis.append('circle')
-//                            .attr('r', minRadius + (length - i))
-//                      .style("stroke-width", 1)    // set the stroke width
-//                        .style("stroke", "black")      // set the line colour ..maybe make this bg
-//                        .style("fill", "none");    
-//                }
-//            }
+            var sizeAsBinaryString = currRadius.toString(2).split('.',1)[0];
+            for (var i = 0; i < sizeAsBinaryString.length; i++) {
+                if (sizeAsBinaryString[sizeAsBinaryString.length - i] === "1") {
+                    vis.append('circle')
+                            .attr('r', function (d) {
+                        return d.r - i * (d.size - ((d.size/d.r) * minRadius)); //the radius circle pack thinks this should be
+                    })
+                      .style("stroke-width", 1)    // set the stroke width
+                        .style("stroke", "black")      // set the line colour ..maybe make this bg
+                        .style("fill", "none");    
+                }
+            }
 
             //make an alpha mask to tint the emojis the same color as their clusters
             vis.append("use")
