@@ -166,19 +166,20 @@
                     })
                       .style("stroke-width", 1)    // set the stroke width
                         .style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
+                        .style("opacity", .4)
                         .style("fill", "none");    
                 }
             }
 
-            //make an alpha mask to tint the emojis the same color as their clusters
-            vis.append("use")
-                    .attr("xlink:href", function (d) {
-                        return "#circle-" + d.uid;
-                    }).style("fill", "white")
-                    .style("opacity", 0.5)
-                    .transition("clarify")
-                    .duration(transitTime / 5)
-                    .style("opacity", 0);
+            //make an alpha mask to tint the emojis the same color as their clusters ... //QC: I think this isn't heplful
+//            vis.append("use")
+//                    .attr("xlink:href", function (d) {
+//                        return "#circle-" + d.uid;
+//                    }).style("fill", "white")
+//                    .style("opacity", 0.5)
+//                    .transition("clarify")
+//                    .duration(transitTime / 5)
+//                    .style("opacity", 0);
 
 
             //this is the clickable region, transparent and bigger than the object
