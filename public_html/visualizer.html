@@ -162,10 +162,10 @@
                 if (sizeAsBinaryString[sizeAsBinaryString.length - i] === "1") {
                     vis.append('circle')
                             .attr('r', function (d) {
-                        return d.r - i * (d.size - ((d.size/d.r) * minRadius)); //the radius circle pack thinks this should be
+                        return d.r - i * (d.size - ((d.size/d.r) * (emojiSize + 1))); //the radius circle pack thinks this should be
                     })
                       .style("stroke-width", 1)    // set the stroke width
-                        .style("stroke", "black")      // set the line colour ..maybe make this bg
+                        .style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
                         .style("fill", "none");    
                 }
             }
