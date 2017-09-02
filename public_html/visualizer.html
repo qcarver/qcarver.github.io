@@ -38,9 +38,9 @@
                 vOffset = 0,
                 setupTime = 250,
                 layoutSize = (Math.min(width, height)) / 3,
-                minRadius = layoutSize / 7,
+                minRadius = layoutSize / 6,
                 maxRadius = minRadius * 6,
-                emojiSize = minRadius / 2,
+                emojiSize = minRadius * .75,
                 transitTime = 30000;
 
 //                var width = window.innerWidth,
@@ -87,7 +87,7 @@
         var g = art.append("g");
 
 
-        function drawCluster(m) {  
+        function drawCluster(m) {
             var object = JSON.parse(m);
             var jsonData = processData(m);
             layoutSize = 10;
@@ -141,12 +141,12 @@
                     .remove()
                     ;
 
-            var currRadius = 0;
+            var currValue = 0;
 
             // enter - only applies to incoming elements (once emptying data)	
             vis.append('circle')
                     .attr('r', function (d) {
-                        currRadius = d.r;
+                        currValue = d.value;
 //                        if (cluster.size < d.r * 2){
 //                            cluster.size = d.r *2;
 //                        }
@@ -177,30 +177,24 @@
                     });
 
 //            //draw rings for number size
-            var sizeAsBinaryString = currRadius.toString(2).split('.', 1)[0];
-            for (var i = 0; i < sizeAsBinaryString.length; i++) {
-                if (sizeAsBinaryString[sizeAsBinaryString.length - i] === "1") {
-                    vis.append('circle')
-                            .attr('r', function (d) {
-                                return ((i * (d.r - emojiSize/2)/sizeAsBinaryString.length) + (emojiSize/2)); //the radius circle pack thinks this should be
-                            })
-                            .style("stroke-width", 1)    // set the stroke width
-                            .style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
-                            .style("opacity", .4)
-                            .style("fill", "none");
+            if (isNaN(currValue)) {
+                //represent text value clues
+            } else {
+                //draw rings for number size
+                var sizeAsBinaryString = currValue.toString(2).split('.', 1)[0];
+                for (var i = 0; i < sizeAsBinaryString.length; i++) {
+                    if (sizeAsBinaryString[sizeAsBinaryString.length - i] === "1") {
+                        vis.append('circle')
+                                .attr('r', function (d) {
+                                    return ((i * (d.r - emojiSize / 2) / sizeAsBinaryString.length) + (emojiSize / 2)); //the radius circle pack thinks this should be
+                                })
+                                .style("stroke-width", 1)    // set the stroke width
+                                .style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
+                                .style("opacity", .4)
+                                .style("fill", "none");
+                    }
                 }
             }
-
-            //make an alpha mask to tint the emojis the same color as their clusters ... //QC: I think this isn't heplful
-//            vis.append("use")
-//                    .attr("xlink:href", function (d) {
-//                        return "#circle-" + d.uid;
-//                    }).style("fill", "white")
-//                    .style("opacity", 0.5)
-//                    .transition("clarify")
-//                    .duration(transitTime / 5)
-//                    .style("opacity", 0);
-
 
             //this is the clickable region, transparent and bigger than the object
             vis.append("circle")
@@ -271,14 +265,14 @@
                         traverse(o[i], dataSet, i);
                     } else {
                         //represent false booleans simply by not showing them
-                        if (o[i].toString().toUpperCase() !== "FALSE"){
-                        //only push on fields (not objects)
-                        var size = circleSize(o[i]);
-                        var uid = Math.floor((1 + Math.random()) * 0x10000);
-                        //layoutSize += size;
-                        dataSet.push({name: i, className: getClassName(parentName), size: size
-                            , uid: (uid), vOffset: vOffset, clicked: false});
-                        console.log("uid: " + uid + "  " + parentName + "." + i + " : " + o[i] + " = " + size);
+                        if (o[i].toString().toUpperCase() !== "FALSE") {
+                            //only push on fields (not objects)
+                            var size = circleSize(o[i]);
+                            var uid = Math.floor((1 + Math.random()) * 0x10000);
+                            //layoutSize += size;
+                            dataSet.push({name: i, className: getClassName(parentName), size: size
+                                , uid: (uid), vOffset: vOffset, clicked: false, value: o[i]});
+                            console.log("uid: " + uid + "  " + parentName + "." + i + " : " + o[i] + " = " + size);
                         }
                     }
                 }
@@ -319,7 +313,7 @@
 
         function circleSize(value) {
             var d = (isNaN(value) ? value.length : value);
-            f = d3.scale.log().base(2).domain([Math.exp(0),Math.exp(7.5)]).range([minRadius,maxRadius])
+            f = d3.scale.log().base(2).domain([Math.exp(0), Math.exp(7.5)]).range([minRadius, maxRadius])
 //            d = Math.ceil(Math.min(maxRadius + Math.log10(d), Math.max(minRadius, d / 2)));
 //            if (d < minRadius)
 //                d = minRadius + d;
