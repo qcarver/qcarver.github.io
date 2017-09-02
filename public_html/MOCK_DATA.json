@@ -1,23 +1,23 @@
 {
-"eval_function":"return (obj.favorite_number > 999)",
+"eval_function":"return (obj.favorite_number > 999)", 
 "test_data":[
-{"name":{"first_name":"Kyle","last_name":"Britnell"},"favorite_number":1,"gender":"Female","contact_info":{"email":"kbritnell0@ftc.gov","ip_address":"212.179.29.40"}},
+{"name":{"first_name":"Kyle","last_name":"Britnell"},"has_car":"True","favorite_number":1,"gender":"Female","contact_info":{"email":"kbritnell0@ftc.gov","ip_address":"212.179.29.40","ssh":"true"}},
 
-{"name":{"first_name":"Lauren","last_name":"Grimshaw"},"favorite_number":1006,"gender":"Male","contact_info":{"email":"lgrimshaw1@aol.com","ip_address":"68.239.130.187"}},
+{"name":{"first_name":"Lauren","last_name":"Grimshaw"},"has_car":"true","favorite_number":1006,"gender":"Male","contact_info":{"email":"lgrimshaw1@aol.com","ip_address":"68.239.130.187","ssh":"true"}},
 
-{"name":{"first_name":"Dahlia","last_name":"Petasch"},"favorite_number":16,"gender":"Female","contact_info":{"email":"dpetasch2@posterous.com","ip_address":"64.170.44.240"}},
+{"name":{"first_name":"Dahlia","last_name":"Petasch"},"has_car":"false","favorite_number":16,"gender":"Female","contact_info":{"email":"dpetasch2@posterous.com","ip_address":"64.170.44.240","ssh":"true"}},
 
-{"name":{"first_name":"Jade","last_name":"Cuningham"},"favorite_number":2227,"gender":"Female","contact_info":{"email":"jcuningham3@altervista.org","ip_address":"63.17.187.180"}},
+{"name":{"first_name":"Jade","last_name":"Cuningham"},"has_car":"False","favorite_number":2227,"gender":"Female","contact_info":{"email":"jcuningham3@altervista.org","ip_address":"63.17.187.180","ssh":"true"}},
 
-{"name":{"first_name":"Colette","last_name":"Gerrad"},"favorite_number":43,"gender":"Female","contact_info":{"email":"cgerrad4@nsfw.gov.au","ip_address":"211.120.6.204"}},
+{"name":{"first_name":"Colette","last_name":"Gerrad"},"has_car":"true","favorite_number":43,"gender":"Female","contact_info":{"email":"cgerrad4@nsfw.gov.au","ip_address":"211.120.6.204","ssh":"true"}},
 
-{"name":{"first_name":"Billy","last_name":"Bradshaw"},"favorite_number":2048,"gender":"Male","contact_info":{"email":"kbritnell0@ftc.gov","ip_address":"192.168.1.42"}},
+{"name":{"first_name":"Billy","last_name":"Bradshaw"},"has_car":"true","favorite_number":2048,"gender":"Male","contact_info":{"email":"kbritnell0@ftc.gov","ip_address":"192.168.1.42","ssh":"true"}},
 
-{"name":{"first_name":"John","last_name":"Jacobson"},"favorite_number":42,"gender":"Male","contact_info":{"email":"2j.navy.mil@gov.us","ip_address":"110.206.30.7"}},
+{"name":{"first_name":"John","last_name":"Jacobson"},"has_car":"true","favorite_number":42,"gender":"Male","contact_info":{"email":"2j.navy.mil@gov.us","ip_address":"110.206.30.7","ssh":"true"}},
 
-{"name":{"first_name":"Emma","last_name":"Peitrovich"},"favorite_number":3000,"gender":"Female","contact_info":{"email":"unicorn@fantasy.com","ip_address":"42.69.42.69"}},
+{"name":{"first_name":"Emma","last_name":"Peitrovich"},"has_car":"FALSE","favorite_number":3000,"gender":"Female","contact_info":{"email":"unicorn@fantasy.com","ip_address":"42.69.42.69","ssh":"true"}},
 
-{"name":{"first_name":"Laquesha","last_name":"Smith"},"favorite_number":13,"gender":"Female","contact_info":{"email":"babygirl@betv.com","ip_address":"124.15.18.43"}},
+{"name":{"first_name":"Laquesha","last_name":"Smith"},"has_car":"true","favorite_number":13,"gender":"Female","contact_info":{"email":"babygirl@betv.com","ip_address":"124.15.18.43","ssh":"true"}},
 
-{"name":{"first_name":"Otto","last_name":"VonBismark"},"favorite_number":7007,"gender":"Female","contact_info":{"email":"automan@yahoo.com","ip_address":"186.45.120.21"}}]
+{"name":{"first_name":"Otto","last_name":"VonBismark"},"has_car":"false","favorite_number":7007,"gender":"Female","contact_info":{"email":"automan@yahoo.com","ip_address":"186.45.120.21","ssh":"true"}}]
 }

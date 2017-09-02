@@ -38,7 +38,7 @@
                 vOffset = 0,
                 setupTime = 250,
                 layoutSize = (Math.min(width, height)) / 3,
-                minRadius = layoutSize / 6,
+                minRadius = layoutSize / 7,
                 maxRadius = minRadius * 6,
                 emojiSize = minRadius / 2,
                 transitTime = 30000;
@@ -87,16 +87,17 @@
         var g = art.append("g");
 
 
-        function drawCluster(m) {
-            setVOffset();
+        function drawCluster(m) {  
             var object = JSON.parse(m);
             var jsonData = processData(m);
             layoutSize = 10;
             jsonData.children.forEach(function (o) {
                 if ((o.size * 2) > layoutSize) {
-                    layoutSize = o.size * 2;
+                    //roughly the radius of the cluster
+                    layoutSize += o.size;
                 }
             });
+            setVOffset();
             var cluster = d3.layout.pack()
                     .size([layoutSize, layoutSize])
                     //.radius(200)
@@ -263,10 +264,14 @@
         function traverse(o, dataSet, parentName) {
             for (var i in o) {
                 if (o[i] !== null) {
-                    if (typeof (o[i]) === "object") {
+                    //skip over container objects 
+                    if (typeof (o[i]) === "object")
+                    {
                         //going one step down in the object tree!!
                         traverse(o[i], dataSet, i);
                     } else {
+                        //represent false booleans simply by not showing them
+                        if (o[i].toString().toUpperCase() !== "FALSE"){
                         //only push on fields (not objects)
                         var size = circleSize(o[i]);
                         var uid = Math.floor((1 + Math.random()) * 0x10000);
@@ -274,7 +279,7 @@
                         dataSet.push({name: i, className: getClassName(parentName), size: size
                             , uid: (uid), vOffset: vOffset, clicked: false});
                         console.log("uid: " + uid + "  " + parentName + "." + i + " : " + o[i] + " = " + size);
-
+                        }
                     }
                 }
             }
