@@ -35,13 +35,23 @@
     <script>
         var width = window.innerWidth,
                 height = window.innerHeight,
-                maxRadius = 60,
                 vOffset = 0,
                 setupTime = 250,
-                minRadius = 5,
                 layoutSize = (Math.min(width, height)) / 3,
-                emojiSize = layoutSize / 8,
+                minRadius = layoutSize / 6,
+                maxRadius = minRadius * 6,
+                emojiSize = minRadius / 2,
                 transitTime = 30000;
+
+//                var width = window.innerWidth,
+//                height = window.innerHeight,
+//                maxRadius = 60,
+//                vOffset = 0,
+//                setupTime = 250,
+//                layoutSize = (Math.min(width, height)) / 3,
+//                minRadius = layoutSize / 8,
+//                emojiSize = minRadius,
+//                transitTime = 30000;
 
         var evalFunction = function () {
             return false;
@@ -79,16 +89,23 @@
 
         function drawCluster(m) {
             setVOffset();
-            var meta = false;
             var object = JSON.parse(m);
             var jsonData = processData(m);
+            layoutSize = 10;
+            jsonData.children.forEach(function (o) {
+                if ((o.size * 2) > layoutSize) {
+                    layoutSize = o.size * 2;
+                }
+            });
             var cluster = d3.layout.pack()
                     .size([layoutSize, layoutSize])
+                    //.radius(200)
                     .value(function (d) {
                         return d.size;
                     }) // new data is loaded to bubble layout
+                    .radius(this.value)
                     .padding(3);
-            console.log("bubble chart layout packed with size" + layoutSize);
+            //console.log("bubble chart layout packed with size" + layoutSize);
             // generate data with calculated layout values
             var nodes = cluster.nodes(jsonData)
                     .filter(function (d) {
@@ -96,8 +113,6 @@
                             return true;
                         }
                     }); // filter out the root object
-
-            console.log("meta: " + meta);
 
             //DATA JOIN: assign new data to existing DOM 
             var vis = chart.selectAll("g")
@@ -110,6 +125,7 @@
 //ENTER + UPDATE
             vis.enter()
                     .append("g")
+                    //.size(500,500)
                     .attr('transform', function (d) {
                         return 'translate(' + (d.x - width / 10) + ',' + (d.y + vOffset) + ')';
                     })
@@ -130,6 +146,9 @@
             vis.append('circle')
                     .attr('r', function (d) {
                         currRadius = d.r;
+//                        if (cluster.size < d.r * 2){
+//                            cluster.size = d.r *2;
+//                        }
                         return d.r; //the radius circle pack thinks this should be
                     })
                     .attr('class', function (d) {
@@ -154,20 +173,20 @@
                     .attr("transform", function (d) {
                         //return "translate(" + (-.75 * d.r) + "," + (-.75 * d.r) + ")";
                         return "translate(" + (-.5 * emojiSize) + "," + (-.5 * emojiSize) + ")";
-                    });            
+                    });
 
 //            //draw rings for number size
-            var sizeAsBinaryString = currRadius.toString(2).split('.',1)[0];
+            var sizeAsBinaryString = currRadius.toString(2).split('.', 1)[0];
             for (var i = 0; i < sizeAsBinaryString.length; i++) {
                 if (sizeAsBinaryString[sizeAsBinaryString.length - i] === "1") {
                     vis.append('circle')
                             .attr('r', function (d) {
-                        return d.r - i * (d.size - ((d.size/d.r) * (emojiSize + 1))); //the radius circle pack thinks this should be
-                    })
-                      .style("stroke-width", 1)    // set the stroke width
-                        .style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
-                        .style("opacity", .4)
-                        .style("fill", "none");    
+                                return ((i * (d.r - emojiSize/2)/sizeAsBinaryString.length) + (emojiSize/2)); //the radius circle pack thinks this should be
+                            })
+                            .style("stroke-width", 1)    // set the stroke width
+                            .style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
+                            .style("opacity", .4)
+                            .style("fill", "none");
                 }
             }
 
@@ -188,7 +207,7 @@
                         return d.r + 60; // bigger than radius of visible objects
                     })
                     .style("fill", "white")
-                    .style("opacity", 0).on('click', function (d) { 
+                    .style("opacity", 0).on('click', function (d) {
                 processClick(evalFunction(object));
                 chart.selectAll("g")
                         .data(nodes, function (d) {
@@ -295,8 +314,11 @@
 
         function circleSize(value) {
             var d = (isNaN(value) ? value.length : value);
-            //return Math.ceil(Math.min(maxRadius + Math.log10(d), Math.max(minRadius, d / 2)));
-            return minRadius + Math.log2(d) + 1;
+            f = d3.scale.log().base(2).domain([Math.exp(0),Math.exp(7.5)]).range([minRadius,maxRadius])
+//            d = Math.ceil(Math.min(maxRadius + Math.log10(d), Math.max(minRadius, d / 2)));
+//            if (d < minRadius)
+//                d = minRadius + d;
+            return f(d);
         }
 
         //////////////////////other utilities    
