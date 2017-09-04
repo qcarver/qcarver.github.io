@@ -1,0 +1,4786 @@
+{
+    "eval_function":"return (obj.num_veh > 1)",
+   "test_data": [
+         {
+            "objectid": "1894",
+            "Location": {
+               "route": "",
+               "county": "043",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MID_DAY",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Other Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "Other Object",
+                  "veh1_loc2": "Off Pavement - Right",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "3601",
+            "Location": {
+               "route": "",
+               "county": "No Controls",
+               "city": "0.00000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Rain",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Wet",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Tractor With Semi-Trailer",
+                  "veh1_dir": "Commercial-Multi-Unit",
+                  "veh1_manuv": "East",
+                  "veh1_evnt1": "Turning Left",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Other",
+                  "veh1_loc2": "Guardrail End",
+                  "veh1_evnt3": "Other",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "1853341.49789000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "4740",
+            "Location": {
+               "route": "",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "NIGHT",
+               "day_o_week": "Thu"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Other Non-Collision",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Left",
+                  "veh1_evnt2": "Fire/Explosion",
+                  "veh1_loc2": "Off Pavement - Left",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "6347",
+            "Location": {
+               "route": "IL084",
+               "county": "098",
+               "city": "Albany"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MID_DAY",
+               "day_o_week": "Sat"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Slow/Stop - Left Turn",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "10776",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Mon"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Same Direction",
+            "Conditions": {
+               "weather": "Rain",
+               "lighting": "Daylight",
+               "surf_cond": "",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Tractor With Semi-Trailer",
+                  "veh1_specl": "Other",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "10831",
+            "Location": {
+               "route": "",
+               "county": "081",
+               "city": "Cordova"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MID_DAY",
+               "day_o_week": "Sun"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Backing",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "16201",
+            "Location": {
+               "route": "I 088",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Tue"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Overturned",
+            "Conditions": {
+               "weather": "Fog/Smoke/Haze",
+               "lighting": "Darkness",
+               "surf_cond": "Ice",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Left",
+                  "veh1_evnt2": "Overturn",
+                  "veh1_loc2": "Off Pavement - Left",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "21333",
+            "Location": {
+               "route": "IL035",
+               "county": "043",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Passing",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "Intersection",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Slow/Stop - Left Turn",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "Intersection",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "21540",
+            "Location": {
+               "route": "IL084",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Lane Use Marking",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Van/Mini-Van",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "21918",
+            "Location": {
+               "route": "",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Sun"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Turning Right",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Left",
+                  "veh1_evnt2": "Guardrail Face",
+                  "veh1_loc2": "Off Pavement - Left",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "22718",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "Wet",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Van/Mini-Van",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "23185",
+            "Location": {
+               "route": "IL084",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Other Regualtory Sig",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "29983",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "NIGHT",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Same Direction",
+            "Conditions": {
+               "weather": "",
+               "lighting": "",
+               "surf_cond": "",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Merging",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Other/Unknown",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "30202",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MID_DAY",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Parked Motor Vehicle",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Other",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Unknown",
+                  "veh1_specl": "Unknown",
+                  "veh1_dir": "Unknown",
+                  "veh1_manuv": "Unknown",
+                  "veh1_evnt1": "Hit Parked Vehicle",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Parked",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "31547",
+            "Location": {
+               "route": "I 090",
+               "county": "Lane Use Marking",
+               "city": "107.27000000000"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Mon"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Dry",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Removed By EMS",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "South",
+                  "veh1_evnt1": "Negotiating A Curve",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Off Pavement - Left",
+                  "veh1_loc2": "Concrete Median Barrier",
+                  "veh1_evnt3": "Off Pavement - Left",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "1847919.30025000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "33213",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Van/Mini-Van",
+                  "veh1_specl": "Unknown",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "34737",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "NIGHT",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Parked Motor Vehicle",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Darkness",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "U-Turn",
+                  "veh1_evnt1": "Hit Parked Vehicle",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Parked",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "35462",
+            "Location": {
+               "route": "IL084",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MID_DAY",
+               "day_o_week": "Sun"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Pickup",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Slow/Stop In Traffic",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "35972",
+            "Location": {
+               "route": "US020",
+               "county": "No Controls",
+               "city": "0.25000000000"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Ice",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Unincorporated",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Pickup",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "West",
+                  "veh1_evnt1": "Straight Ahead",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Other",
+                  "veh1_loc2": "Other Fixed Object",
+                  "veh1_evnt3": "Other",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "2122071.13714000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "36492",
+            "Location": {
+               "route": "",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Southeast",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "38367",
+            "Location": {
+               "route": "IL084",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "Snowbank",
+                  "veh1_loc2": "Off Pavement - Right",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "38961",
+            "Location": {
+               "route": "US020",
+               "county": "No Controls",
+               "city": "0.65000000000"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Angle",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Wet",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "East Dubuque",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Pickup",
+                  "veh1_dir": "Other",
+                  "veh1_manuv": "West",
+                  "veh1_evnt1": "Skidding/Control Loss",
+                  "veh1_loc1": "Motor Vehicle In Traffic",
+                  "veh1_evnt2": "On Pavement (Roadway)",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Normal",
+                  "veh2_specl": "SUV",
+                  "veh2_dir": "Personal",
+                  "veh2_manuv": "Unknown",
+                  "veh2_evnt1": "Straight Ahead",
+                  "veh2_loc1": "Motor Vehicle In Traffic",
+                  "veh2_evnt2": "On Pavement (Roadway)",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "2122112.19836000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "40117",
+            "Location": {
+               "route": "US012",
+               "county": "Traffic Signal",
+               "city": "83.46000000000"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Ice",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Removed By EMS",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "Northwest",
+                  "veh1_evnt1": "Straight Ahead",
+                  "veh1_loc1": "Motor Vehicle In Traffic",
+                  "veh1_evnt2": "On Pavement (Roadway)",
+                  "veh1_loc2": "Motor Vehicle In Traffic",
+                  "veh1_evnt3": "Off Pavement - Left",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Removed By EMS",
+                  "veh2_specl": "Passenger",
+                  "veh2_dir": "Personal",
+                  "veh2_manuv": "Northwest",
+                  "veh2_evnt1": "Straight Ahead",
+                  "veh2_loc1": "Motor Vehicle In Traffic",
+                  "veh2_evnt2": "On Pavement (Roadway)",
+                  "veh2_loc2": "Guardrail Face",
+                  "veh2_evnt3": "Off Pavement - Left",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "1848847.99989000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "Y"
+         },
+         {
+            "objectid": "41510",
+            "Location": {
+               "route": "IL035",
+               "county": "043",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MORNING",
+               "day_o_week": "Mon"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Turning",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Turning Left",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "43434",
+            "Location": {
+               "route": "IL084",
+               "county": "098",
+               "city": "Albany"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MID_DAY",
+               "day_o_week": "Tue"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Overturned",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Removed By EMS",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Driving Wrong Way",
+                  "veh1_evnt1": "Overturn",
+                  "veh1_loc1": "Off Pavement - Left",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "44171",
+            "Location": {
+               "route": "IL084",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MID_DAY",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Stop Sign/Flasher",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Slow/Stop - Right Turn",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "44596",
+            "Location": {
+               "route": "",
+               "county": "No Controls",
+               "city": "0.00000000000"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "NIGHT",
+               "day_o_week": "Thu"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Snow or Slush",
+               "rd_feature": ""
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "East Dubuque",
+                  "veh1_type": "Alcohol Impaired",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "South",
+                  "veh1_evnt1": "Skidding/Control Loss",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Off Pavement - Left",
+                  "veh1_loc2": "Tree or Shrub",
+                  "veh1_evnt3": "Off Pavement - Left",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "2120203.78477000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "45168",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "NIGHT",
+               "day_o_week": "Thu"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Parked Motor Vehicle",
+            "Conditions": {
+               "weather": "Rain",
+               "lighting": "Darkness",
+               "surf_cond": "Wet",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Unknown",
+                  "veh1_specl": "Unknown",
+                  "veh1_dir": "Unknown",
+                  "veh1_manuv": "Unknown",
+                  "veh1_evnt1": "Hit Parked Vehicle",
+                  "veh1_loc1": "",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Not In Use",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Parked",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "45729",
+            "Location": {
+               "route": "IL035",
+               "county": "No Controls",
+               "city": "0.47000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Turning",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Snow or Slush",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "East Dubuque",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "South",
+                  "veh1_evnt1": "Straight Ahead",
+                  "veh1_loc1": "Motor Vehicle In Traffic",
+                  "veh1_evnt2": "On Pavement (Roadway)",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Normal",
+                  "veh2_specl": "Van/Mini-Van",
+                  "veh2_dir": "Personal",
+                  "veh2_manuv": "South",
+                  "veh2_evnt1": "Turning Right",
+                  "veh2_loc1": "Motor Vehicle In Traffic",
+                  "veh2_evnt2": "On Pavement (Roadway)",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "2122796.98530000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "46382",
+            "Location": {
+               "route": "US020",
+               "county": "No Controls",
+               "city": "0.09000000000"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Ice",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Unincorporated",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Pickup",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "West",
+                  "veh1_evnt1": "Straight Ahead",
+                  "veh1_loc1": "Other Fixed Object",
+                  "veh1_evnt2": "On Pavement (Roadway)",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "2122045.53926000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "46945",
+            "Location": {
+               "route": "US020",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Angle",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "SUV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Backing",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Other/Unknown",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "West",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "47663",
+            "Location": {
+               "route": "US020",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MID_DAY",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "SUV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Slow/Stop In Traffic",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Other/Unknown",
+                  "veh2_type": "SUV",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Slow/Stop In Traffic",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "48077",
+            "Location": {
+               "route": "",
+               "county": "No Controls",
+               "city": "0.00000000000"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "AFTERNOON",
+               "day_o_week": "Fri"
+            },
+            "injuries": "2",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Opposite Direction",
+            "Conditions": {
+               "weather": "Sleet/Hail",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Ice",
+               "rd_feature": ""
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Albany",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Pickup",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "West",
+                  "veh1_evnt1": "Skidding/Control Loss",
+                  "veh1_loc1": "Motor Vehicle In Traffic",
+                  "veh1_evnt2": "On Pavement (Roadway)",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Normal",
+                  "veh2_specl": "SUV",
+                  "veh2_dir": "Personal",
+                  "veh2_manuv": "Unknown",
+                  "veh2_evnt1": "Slow/Stop In Traffic",
+                  "veh2_loc1": "Motor Vehicle In Traffic",
+                  "veh2_evnt2": "On Pavement (Roadway)",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "1864751.60573000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "49005",
+            "Location": {
+               "route": "IL084",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Wed"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Slow/Stop In Traffic",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "50462",
+            "Location": {
+               "route": "US012",
+               "county": "No Controls",
+               "city": "83.37000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Fri"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Dry",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Alcohol Impaired",
+                  "veh1_specl": "Pickup",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "North",
+                  "veh1_evnt1": "Straight Ahead",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Off Pavement - Left",
+                  "veh1_loc2": "Concrete Median Barrier",
+                  "veh1_evnt3": "Off Pavement - Left",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "1849460.48588000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "50539",
+            "Location": {
+               "route": "I 088",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Mon"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Same Direction",
+            "Conditions": {
+               "weather": "Rain",
+               "lighting": "Darkness",
+               "surf_cond": "Wet",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Lane Use Marking",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Tractor With Semi-Trailer",
+                  "veh2_specl": "Commercial-Multi-Unit",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "51813",
+            "Location": {
+               "route": "",
+               "county": "007",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "AFTERNOON",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "Overturn",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "52902",
+            "Location": {
+               "route": "",
+               "county": "No Controls",
+               "city": "0.00000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Snow or Slush",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "East Dubuque",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "Southeast",
+                  "veh1_evnt1": "Skidding/Control Loss",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Off Pavement - Right",
+                  "veh1_loc2": "Concrete Median Barrier",
+                  "veh1_evnt3": "Off Pavement - Right",
+                  "veh1_loc3": "Hit Parked Vehicle"
+               }
+            ],
+            "intersec": "2122862.11814000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "53822",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "AFTERNOON",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Parked Motor Vehicle",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Darkness",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Other",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Hit Parked Vehicle",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Parked",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "54434",
+            "Location": {
+               "route": "",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MID_DAY",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "Guardrail End",
+                  "veh1_loc2": "Off Pavement - Right",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "55019",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MID_DAY",
+               "day_o_week": "Sun"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Northwest",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "Northwest",
+                  "veh2_manuv": "Avoiding Vehicle/Objects",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "56301",
+            "Location": {
+               "route": "IL084",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Dawn",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "SUV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "59125",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MID_DAY",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "61947",
+            "Location": {
+               "route": "",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Sun"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Turning Left",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Left",
+                  "veh1_evnt2": "Other Fixed Object",
+                  "veh1_loc2": "Off Pavement - Left",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "62743",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MID_DAY",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Turning",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Truck Single Unit",
+                  "veh1_specl": "Unknown",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Turning Left",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Pickup",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "West",
+                  "veh2_manuv": "Turning Left",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "62789",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MID_DAY",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "Wet",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Stop Sign/Flasher",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Northwest",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Other/Unknown",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "Northwest",
+                  "veh2_manuv": "Slow/Stop In Traffic",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "62917",
+            "Location": {
+               "route": "IL035",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Thu"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "Other",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Other/Unknown",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Slow/Stop - Left Turn",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "Other",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "64293",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Sat"
+            },
+            "injuries": "3",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Same Direction",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Dusk",
+               "surf_cond": "Wet",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Changing Lanes",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "65553",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Mon"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Pedestrian",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Van/Mini-Van",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Pedestrian",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "N/A",
+                  "veh2_type": "N/A",
+                  "veh2_specl": "N/A",
+                  "veh2_dir": "N/A",
+                  "veh2_manuv": "N/A",
+                  "veh2_evnt1": "N/A",
+                  "veh2_loc1": "N/A",
+                  "veh2_evnt2": "N/A",
+                  "veh2_loc2": "N/A",
+                  "veh2_evnt3": "N/A",
+                  "veh2_loc3": "N/A"
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "65696",
+            "Location": {
+               "route": "IL084",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MORNING",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "66077",
+            "Location": {
+               "route": "IL084",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MID_DAY",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "1",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Lane Use Marking",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Motorcycle (Over 150cc)",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "Overturn",
+                  "veh1_loc2": "On Pavement (Roadway)",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "66968",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Same Direction",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Southeast",
+                  "veh1_manuv": "Entering Traffic Lane Fr",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "SUV",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "Southeast",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "67118",
+            "Location": {
+               "route": "",
+               "county": "007",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Sun"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Rain",
+               "lighting": "Daylight",
+               "surf_cond": "Wet",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "Guardrail Face",
+                  "veh1_loc2": "Off Pavement - Right",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "68760",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "AFTERNOON",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "SUV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "SUV",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Slow/Stop In Traffic",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "69972",
+            "Location": {
+               "route": "IL084",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "71600",
+            "Location": {
+               "route": "IL035",
+               "county": "043",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Turning",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Southwest",
+                  "veh1_manuv": "Turning Left",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "Northeast",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "74657",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Mon"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Same Direction",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Changing Lanes",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "75886",
+            "Location": {
+               "route": "US012",
+               "county": "No Controls",
+               "city": "83.70000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Sun"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Dry",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "South",
+                  "veh1_evnt1": "Turning Right",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Off Pavement - Left",
+                  "veh1_loc2": "Tree or Shrub",
+                  "veh1_evnt3": "Off Pavement - Left",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "1847523.32089000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "76244",
+            "Location": {
+               "route": "US012",
+               "county": "No Controls",
+               "city": "82.92000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Wed"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Parked Motor Vehicle",
+            "Conditions": {
+               "weather": "Sleet/Hail",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Snow or Slush",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Alcohol Impaired",
+                  "veh1_specl": "Van/Mini-Van",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "South",
+                  "veh1_evnt1": "Unknown",
+                  "veh1_loc1": "Hit Parked Vehicle",
+                  "veh1_evnt2": "On Pavement (Roadway)",
+                  "veh1_loc2": "Ran Off Roadway",
+                  "veh1_evnt3": "Off Pavement - Right",
+                  "veh1_loc3": "Light Support"
+               }
+            ],
+            "intersec": "1851760.44883000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "Y"
+         },
+         {
+            "objectid": "77449",
+            "Location": {
+               "route": "",
+               "county": "007",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Wed"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Ice",
+               "rd_defect": "Other",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Van/Mini-Van",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "Ditch/Embankment",
+                  "veh1_loc2": "Off Pavement - Right",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "77777",
+            "Location": {
+               "route": "IL035",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Mon"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Opposite Direction",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "SUV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Pickup",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "81045",
+            "Location": {
+               "route": "US020",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Wed"
+            },
+            "injuries": "2",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "Ditch/Embankment",
+                  "veh1_loc2": "Off Pavement - Right",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "81071",
+            "Location": {
+               "route": "",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "FALL",
+               "time": "NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Overturned",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Left",
+                  "veh1_evnt2": "Overturn",
+                  "veh1_loc2": "Off Pavement - Left",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "82490",
+            "Location": {
+               "route": "",
+               "county": "007",
+               "city": "Brussels"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "NIGHT",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Van/Mini-Van",
+                  "veh1_specl": "Other",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "83200",
+            "Location": {
+               "route": "US020",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MID_DAY",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Same Direction",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Pickup",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Other/Unknown",
+                  "veh2_type": "Tractor With Semi-Trailer",
+                  "veh2_specl": "Mass Transit",
+                  "veh2_dir": "West",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "84937",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Sideswipe Opposite Direction",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Ice",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Unknown",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Slow/Stop In Traffic",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "Y",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "85640",
+            "Location": {
+               "route": "",
+               "county": "No Controls",
+               "city": "0.00000000000"
+            },
+            "Date": {
+               "season": "WINTER",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Ice",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Other/Unknown",
+                  "veh1_specl": "SUV",
+                  "veh1_dir": "Unknown",
+                  "veh1_manuv": "North",
+                  "veh1_evnt1": "Unknown",
+                  "veh1_loc1": "Bridge Support",
+                  "veh1_evnt2": "Off Pavement - Left",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "1850380.17396000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "89505",
+            "Location": {
+               "route": "",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "FALL",
+               "time": "MORNING",
+               "day_o_week": "Mon"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Overturned",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Wet",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "ATV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Southeast",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Overturn",
+                  "veh1_loc1": "Other",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "91090",
+            "Location": {
+               "route": "IL035",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Parked Motor Vehicle",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Not In Use",
+                  "veh1_dir": "Unknown",
+                  "veh1_manuv": "Parked",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Other",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Backing",
+                  "veh2_evnt1": "Hit Parked Vehicle",
+                  "veh2_loc1": "Off Pavement - Right",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "91290",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "AFTERNOON",
+               "day_o_week": "Sat"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Van/Mini-Van",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Bus Over 15 Passengers",
+                  "veh2_specl": "CTA",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Slow/Stop - Load/Unload",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "91367",
+            "Location": {
+               "route": "I 090",
+               "county": "No Controls",
+               "city": "107.22000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Mon"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Snow or Slush",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "North",
+                  "veh1_evnt1": "Other",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Off Pavement - Left",
+                  "veh1_loc2": "Concrete Median Barrier",
+                  "veh1_evnt3": "Off Pavement - Left",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "1848104.77805000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "92186",
+            "Location": {
+               "route": "US020",
+               "county": "043",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Slow/Stop In Traffic",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "West",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "94033",
+            "Location": {
+               "route": "",
+               "county": "No Controls",
+               "city": "0.00000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Parked Motor Vehicle",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Dry",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "8",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Normal",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Personal",
+                  "veh1_manuv": "North",
+                  "veh1_evnt1": "Skidding/Control Loss",
+                  "veh1_loc1": "Hit Parked Vehicle",
+                  "veh1_evnt2": "On Pavement (Roadway)",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "1850824.00169000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "95670",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Cloudy/Overcast",
+               "lighting": "Daylight",
+               "surf_cond": "Wet",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "3",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Northwest",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "SUV",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "Northwest",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               },
+               {
+                  "driver_3": "Normal",
+                  "veh3_type": "Van/Mini-Van",
+                  "veh3_specl": "Personal",
+                  "veh3_dir": "Northwest",
+                  "veh3_manuv": "Skidding/Control Loss",
+                  "veh3_evnt1": "Motor Vehicle In Traffic",
+                  "veh3_loc1": "On Pavement (Roadway)",
+                  "veh3_evnt2": "",
+                  "veh3_loc2": "",
+                  "veh3_evnt3": "",
+                  "veh3_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "96384",
+            "Location": {
+               "route": "",
+               "county": "No Controls",
+               "city": "0.00000000000"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Thu"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "\"Darkness",
+               "surf_cond": "Lighted Road\"",
+               "rd_defect": "Wet",
+               "rd_feature": "No Defects"
+            },
+            "traf_cntrl": "Not Applicable",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Chicago",
+                  "veh1_type": "Alcohol Impaired",
+                  "veh1_specl": "Passenger",
+                  "veh1_dir": "Unknown",
+                  "veh1_manuv": "North",
+                  "veh1_evnt1": "Straight Ahead",
+                  "veh1_loc1": "Ran Off Roadway",
+                  "veh1_evnt2": "Off Pavement - Left",
+                  "veh1_loc2": "Other Fixed Object",
+                  "veh1_evnt3": "Off Pavement - Left",
+                  "veh1_loc3": "Other Pole or Post"
+               }
+            ],
+            "intersec": "1849281.95755000000",
+            "workzone": "2016090504",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "97343",
+            "Location": {
+               "route": "",
+               "county": "043",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "FALL",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "",
+               "lighting": "",
+               "surf_cond": "",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Unknown",
+                  "veh1_specl": "Unknown",
+                  "veh1_dir": "Unknown",
+                  "veh1_manuv": "Skidding/Control Loss",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Left",
+                  "veh1_evnt2": "Fence",
+                  "veh1_loc2": "Off Pavement - Left",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "100381",
+            "Location": {
+               "route": "",
+               "county": "007",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "101587",
+            "Location": {
+               "route": "",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "FALL",
+               "time": "MORNING",
+               "day_o_week": "Thu"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Lane Use Marking",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "SUV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "102572",
+            "Location": {
+               "route": "",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MID_DAY",
+               "day_o_week": "Fri"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Fixed Object",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Southeast",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Ran Off Roadway",
+                  "veh1_loc1": "Off Pavement - Left",
+                  "veh1_evnt2": "Tree or Shrub",
+                  "veh1_loc2": "Off Pavement - Left",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "103617",
+            "Location": {
+               "route": "IL084",
+               "county": "098",
+               "city": "Albany"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Sat"
+            },
+            "injuries": "3",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Snow",
+               "lighting": "Daylight",
+               "surf_cond": "Snow or Slush",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "3",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "SUV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Slow/Stop - Left Turn",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "Motor Vehicle In Traffic",
+                  "veh2_loc2": "On Pavement (Roadway)",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               },
+               {
+                  "driver_3": "Normal",
+                  "veh3_type": "Van/Mini-Van",
+                  "veh3_specl": "Personal",
+                  "veh3_dir": "North",
+                  "veh3_manuv": "Straight Ahead",
+                  "veh3_evnt1": "Motor Vehicle In Traffic",
+                  "veh3_loc1": "On Pavement (Roadway)",
+                  "veh3_evnt2": "",
+                  "veh3_loc2": "",
+                  "veh3_evnt3": "",
+                  "veh3_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "104070",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Wed"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "105144",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Turning",
+            "Conditions": {
+               "weather": "Cloudy/Overcast",
+               "lighting": "Darkness",
+               "surf_cond": "",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Fatigued",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Turning Right",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Other/Unknown",
+                  "veh2_type": "Unknown",
+                  "veh2_specl": "Unknown",
+                  "veh2_dir": "Unknown",
+                  "veh2_manuv": "Unknown",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "106018",
+            "Location": {
+               "route": "",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Yield",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Van/Mini-Van",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "106082",
+            "Location": {
+               "route": "",
+               "county": "081",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MORNING",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Turning",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Stop Sign/Flasher",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "West",
+                  "veh1_manuv": "Turning Left",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "SUV",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "106121",
+            "Location": {
+               "route": "",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Tue"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Angle",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Stop Sign/Flasher",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Motorcycle (Over 150cc)",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "West",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "108988",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SUMMER",
+               "time": "MORNING",
+               "day_o_week": "Mon"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Turning",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Stop Sign/Flasher",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Tractor With Semi-Trailer",
+                  "veh1_specl": "Unknown",
+                  "veh1_dir": "North",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Unknown",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Turning Right",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "109392",
+            "Location": {
+               "route": "US020",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "LATE_NIGHT",
+               "day_o_week": "Sat"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "110727",
+            "Location": {
+               "route": "US041",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "AFTERNOON",
+               "day_o_week": "Fri"
+            },
+            "injuries": "1",
+            "fatalities": "0",
+            "coll_type": "Angle",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Slow/Stop - Left Turn",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "East",
+                  "veh2_manuv": "Straight Ahead",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "110833",
+            "Location": {
+               "route": "",
+               "county": "043",
+               "city": "East Dubuque"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Thu"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Animal",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "",
+               "rd_defect": "",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "East",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Deer",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "113590",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "MID_DAY",
+               "day_o_week": "Wed"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Parked Motor Vehicle",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Stop Sign/Flasher",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Hit Parked Vehicle",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Not In Use",
+                  "veh2_dir": "North",
+                  "veh2_manuv": "Parked",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "Off Pavement - Right",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "115302",
+            "Location": {
+               "route": "US012",
+               "county": "016",
+               "city": "Chicago"
+            },
+            "Date": {
+               "season": "SPRING",
+               "time": "NIGHT",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Turning",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Darkness",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "Traffic Signal",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Unknown",
+                  "veh1_dir": "Southeast",
+                  "veh1_manuv": "Turning Left",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "Southeast",
+                  "veh2_manuv": "Turning Left",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "Y",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "118378",
+            "Location": {
+               "route": "IL035",
+               "county": "043",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "FALL",
+               "time": "AFTERNOON",
+               "day_o_week": "Mon"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Rear End",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "2",
+            "Vehicle": [
+               {
+                  "driver_1": "Normal",
+                  "veh1_type": "SUV",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "South",
+                  "veh1_manuv": "Straight Ahead",
+                  "veh1_evnt1": "Motor Vehicle In Traffic",
+                  "veh1_loc1": "On Pavement (Roadway)",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               },
+               {
+                  "driver_2": "Normal",
+                  "veh2_type": "Passenger",
+                  "veh2_specl": "Personal",
+                  "veh2_dir": "South",
+                  "veh2_manuv": "Slow/Stop - Left Turn",
+                  "veh2_evnt1": "Motor Vehicle In Traffic",
+                  "veh2_loc1": "On Pavement (Roadway)",
+                  "veh2_evnt2": "",
+                  "veh2_loc2": "",
+                  "veh2_evnt3": "",
+                  "veh2_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         },
+         {
+            "objectid": "118969",
+            "Location": {
+               "route": "",
+               "county": "098",
+               "city": "Unincorporated"
+            },
+            "Date": {
+               "season": "FALL",
+               "time": "AFTERNOON",
+               "day_o_week": "Fri"
+            },
+            "injuries": "0",
+            "fatalities": "0",
+            "coll_type": "Overturned",
+            "Conditions": {
+               "weather": "Clear",
+               "lighting": "Daylight",
+               "surf_cond": "Dry",
+               "rd_defect": "No Defects",
+               "rd_feature": "Not Applicable"
+            },
+            "traf_cntrl": "No Controls",
+            "num_veh": "1",
+            "Vehicle": [
+               {
+                  "driver_1": "Other/Unknown",
+                  "veh1_type": "Passenger",
+                  "veh1_specl": "Personal",
+                  "veh1_dir": "Southeast",
+                  "veh1_manuv": "Negotiating A Curve",
+                  "veh1_evnt1": "Overturn",
+                  "veh1_loc1": "Off Pavement - Right",
+                  "veh1_evnt2": "",
+                  "veh1_loc2": "",
+                  "veh1_evnt3": "",
+                  "veh1_loc3": ""
+               }
+            ],
+            "intersec": "N",
+            "workzone": "N",
+            "exceedspee": "N",
+            "cellphoneu": "N"
+         }
+      ]
+}
