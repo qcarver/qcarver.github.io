@@ -26,6 +26,13 @@
         hits {
             color: green;
         }
+        .train{
+            fill: "none";
+            stroke: green;
+            stroke-width: 5;
+            fill-opacity: 0;
+            letter-spacing: 1em;
+        }
 
     </style>
 </head>
@@ -98,6 +105,8 @@
                     layoutSize += o.size;
                 }
             });
+            if (layoutSize < height / 2)
+                layoutSize = height / 2;
             setVOffset();
             var cluster = d3.layout.pack()
                     .size([layoutSize, layoutSize])
@@ -109,12 +118,11 @@
                     .padding(3);
             //console.log("bubble chart layout packed with size" + layoutSize);
             // generate data with calculated layout values
-            var nodes = cluster.nodes(jsonData)
-                    .filter(function (d) {
-                        if (!d.children) {
-                            return true;
-                        }
-                    }); // filter out the root object
+            jsonData.name = "training_circle";
+            jsonData.className = "train";
+            jsonData.contents = "click me!";
+            jsonData.uid = Math.floor((1 + Math.random()) * 0x10000);
+            var nodes = cluster.nodes(jsonData);
 
             //DATA JOIN: assign new data to existing DOM 
             var vis = chart.selectAll("g")
@@ -131,6 +139,9 @@
                     .attr('transform', function (d) {
                         return 'translate(' + (d.x - width / 10) + ',' + (d.y + vOffset) + ')';
                     })
+                    .attr('class', function (d) {
+                        return d.className;
+                    })
                     .transition("enter")
                     .duration(transitTime / 2)
                     .attr('transform', function (d) {
@@ -141,22 +152,28 @@
                     .duration(0)
                     .remove()
                     ;
-
+            //training circle?
 
             // enter - only applies to incoming elements (once emptying data)	
             vis.append('circle')
                     .attr('r', function (d) {
+                        if (d.name === "training_circle"){
+                            d.r +=75;
+                        }
                         return d.r; //the radius circle pack thinks this should be
-                    })
-                    .attr('class', function (d) {
-                        return d.className;
                     })
                     .attr("id", function (d) {
                         return "circle-" + d.uid;
                     });
+                    
+                    
+            
 
-
-            vis.append('emoji')
+            vis.append('emoji').filter(function (d) {
+                if (!d.children) {
+                    return true;
+                }
+            })
                     .attr('symbol', function (d) {
                         return emojiHash(d.name);
                     })
@@ -174,15 +191,17 @@
 //chart.selectAll("g").filter(function (d) {
 //                            return d.uid === this_uid;
 //                        }).
-          vis.filter(function (d) {
+            vis.filter(function (d) {
                 return isNaN(d.contents);
             }).each(function (d) {
                 console.log("adding content svg text for field named: " + d.name);
                 this_uid = d.uid;
-                
+
                 var svgContainer = chart.selectAll("g").filter(function (d) {
-                            return d.uid === this_uid;
-                        }).append('svg').filter(function(d){return isNaN(d.content);})
+                    return d.uid === this_uid;
+                }).append('svg').filter(function (d) {
+                    return isNaN(d.content);
+                })
                         .attr('width', function (d) {
                             return 2 * d.r;
                         })
@@ -198,38 +217,35 @@
 
                 svgContainer.append("path")
                         .attr("d", function (d) {
-                            return 'm' + (d.r * 0.05) + ',' + ((d.r * 0.95)) + ' '
+                            return 'm' + (d.r * .05) + ',' + ((d.r * .95)) + ' '
                                     + 'a' + (d.r * .95) + ',' + (d.r * .95) + ' 0 0 0 '
                                     + (2 * (d.r * .95)) + ',0';
+                        
 
                         })
                         .style("fill", "none")
-                        //.style("stroke", "black")  //for debugging:wheres my line!
+                        .style("stroke", "none")  //for debugging:wheres my line!
                         .attr("id", function (d) {
                             return "text_path-" + d.uid;
                         });
 
                 svgContainer.append('text')
                         .append('textPath')
-                        .style("fill", "black")
                         .style("font-size", function (d) {
-                            return (d.r * .6) + "px";
+                            var m = (d.name === "training_circle")? .2 : .6;
+                            return (d.r * m) + "px";
                         })
                         .attr('startOffset', '50%')
-                        //.attr("dy", ".35em")
                         .attr("text-anchor", "middle")
-                        .style("pointer-events", "none")
                         .attr('xlink:href', function (d) {
                             return '#text_path-' + d.uid;
                         })
                         .text(function (d) {
                             return d.contents;
                         });
-
-                
             });
-                
-                
+
+
 
 
             vis.filter(function (d) {
@@ -248,9 +264,9 @@
                                     return ((i * (d.r - emojiSize / 2) / sizeAsBinaryString.length) + (emojiSize / 2)); //the radius circle pack thinks this should be
                                 })
                                 .style("stroke-width", 1)    // set the stroke width
-                                .style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
-                                .style("opacity", .4)
-                                .style("fill", "none");
+                                //.style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
+                                .style("fill-opacity", 0)
+                                .style("stroke-opacity", 1)
                     }
                 }
             });
@@ -324,16 +340,17 @@
                         traverse(o[i], dataSet, i);
                     } else {
                         //sometimes teh data file has a number in quotes
-                        if(!isNaN(Number(o[i]))){
+                        if (!isNaN(Number(o[i]))) {
                             o[i] = Number(o[i])
                         }
                         //represent false booleans simply by not showing them
-                        //if (o[i].toString().toUpperCase() !== "FALSE") {
-                        if (includeFieldWithValue(o[i]) === true){
+                        if (includeFieldWithValue(o[i]) === true) {
                             //only push on fields (not objects)
                             var size = circleSize(o[i]);
                             var uid = Math.floor((1 + Math.random()) * 0x10000);
                             //layoutSize += size;
+                            
+                            //dataSet.push({name: i, className: "root", size: size
                             dataSet.push({name: i, className: getClassName(parentName), size: size
                                 , uid: (uid), vOffset: vOffset, clicked: false, contents: o[i]});
                             console.log("uid: " + uid + "  " + parentName + "." + i + " : " + o[i] + " = " + size);
@@ -342,15 +359,19 @@
                 }
             }
         }
-        
-        function includeFieldWithValue(value){
+
+        function includeFieldWithValue(value) {
             var rv = true;
-            if (    (value.toString().length === 0)||
-                    (value.toString().toUpperCase() === "FALSE")||
+            if ((value.toString().length === 0) ||
+                    (value.toString().toUpperCase() === "FALSE") ||
                     (value.toString().toUpperCase() === "N") ||
-                    (value.toString().substring(0, 2).toUpperCase() === "No ") ||
-                    (value.toString().substring(0, 3).toUpperCase() === "Not ") ||
-                    (value === 0)){
+                    (value.toString().toUpperCase() === "?") ||
+                    (value.toString().toUpperCase() === " ") ||
+                    (value.toString().substring(0, 2).toUpperCase() === "NO ") ||
+                    (value.toString().substring(0, 2).toUpperCase() === "NA ") ||
+                    (value.toString().substring(0, 3).toUpperCase() === "NOT ") ||
+                    (value.toString().substring(0, 3).toUpperCase() === "UNKNOWN ") ||
+                    (value === 0)) {
                 rv = false;
             }
             return rv;
@@ -359,8 +380,21 @@
         function getClassName(name) {
             if (document.getElementsByClassName(name).length === 0) {
                 var style = document.createElement('style');
+                var color = getHashColor(name);
+                var invertedColor = getInvertedColor(color);
                 style.type = 'text/css';
-                style.innerHTML = '.' + name + ' { fill: #' + getHashColor(name) + '; background: #F495A3; }';
+                style.innerHTML = '.' + name + ' { fill: #' + color + '; color: #' + invertedColor + '; stroke: #' + invertedColor + ';}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
+            return name;
+        }
+        
+        function getTrainingClass(){
+        var name = "root";
+                if (document.getElementsByClassName(name).length === 0) {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = '.' + name + ' { fill: none; color: white; stroke: green;}';
                 document.getElementsByTagName('head')[0].appendChild(style);
             }
             return name;
@@ -423,7 +457,10 @@
         };
 
         var request = new XMLHttpRequest();
-        request.open("GET", "CRASH_DATA.json", false);
+        //request.open("GET", "MOCK_DATA.json", false);
+        //request.open("GET", "MOCK_PPV_DATA.json", false);
+        //request.open("GET", "CRASH_DATA2.json", false);
+        request.open("GET", "TITANIC_MORT_DATA.json", false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
         evalFunction = new Function("obj", JSON_object.eval_function);
@@ -438,6 +475,20 @@
                     index * transitTime / 8);
         }
         );
+//pass in hex number as 6 char string
+        function getInvertedColor(hex) {
+            // invert color components
+            var r = (255 - parseInt(hex.slice(0, 2), 16)).toString(16),
+                    g = (255 - parseInt(hex.slice(2, 4), 16)).toString(16),
+                    b = (255 - parseInt(hex.slice(4, 6), 16)).toString(16);
+            // pad each with zeros and return
+            return padZero(r) + padZero(g) + padZero(b);
+        }
 
+        function padZero(str, len) {
+            len = len || 2;
+            var zeros = new Array(len).join('0');
+            return (zeros + str).slice(-len);
+        }
     </script>
 </body>
