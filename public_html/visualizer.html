@@ -81,7 +81,7 @@
                 .attr('class', 'overlay')
                 .attr('width', width)
                 .attr('height', height);
-
+        
         var chart = d3.select('body').append('svg')
                 .attr('width', width)
                 .attr('height', height)
@@ -118,16 +118,22 @@
                     .padding(3);
             //console.log("bubble chart layout packed with size" + layoutSize);
             // generate data with calculated layout values
-            jsonData.name = "training_circle";
-            jsonData.className = "train";
-            jsonData.contents = "click me!";
-            jsonData.uid = Math.floor((1 + Math.random()) * 0x10000);
-            var nodes = cluster.nodes(jsonData);
+            if ((hits < 10) && (evalFunction(object))){
+                jsonData.name = "training_circle";
+                jsonData.className = "train";
+                jsonData.contents = "click me!";
+                jsonData.uid = Math.floor((1 + Math.random()) * 0x10000);
+            }
+            var nodes = cluster.nodes(jsonData).filter(function (d) {
+                        if (!d.children || d.name === "training_circle") {
+                            return true;
+                        }
+                    });;
 
             //DATA JOIN: assign new data to existing DOM 
             var vis = chart.selectAll("g")
                     .data(nodes, function (d) {
-                        return d.uid;
+                            return d.uid;
                     });
 
             //UPDATE: //there is no UPDATE in this design
@@ -152,22 +158,21 @@
                     .duration(0)
                     .remove()
                     ;
-            //training circle?
 
             // enter - only applies to incoming elements (once emptying data)	
             vis.append('circle')
                     .attr('r', function (d) {
-                        if (d.name === "training_circle"){
-                            d.r +=75;
+                        if (d.name === "training_circle") {
+                            d.r += 75;
                         }
                         return d.r; //the radius circle pack thinks this should be
                     })
                     .attr("id", function (d) {
                         return "circle-" + d.uid;
                     });
-                    
-                    
-            
+
+
+
 
             vis.append('emoji').filter(function (d) {
                 if (!d.children) {
@@ -220,8 +225,6 @@
                             return 'm' + (d.r * .05) + ',' + ((d.r * .95)) + ' '
                                     + 'a' + (d.r * .95) + ',' + (d.r * .95) + ' 0 0 0 '
                                     + (2 * (d.r * .95)) + ',0';
-                        
-
                         })
                         .style("fill", "none")
                         .style("stroke", "none")  //for debugging:wheres my line!
@@ -232,7 +235,7 @@
                 svgContainer.append('text')
                         .append('textPath')
                         .style("font-size", function (d) {
-                            var m = (d.name === "training_circle")? .2 : .6;
+                            var m = (d.name === "training_circle") ? .2 : .6;
                             return (d.r * m) + "px";
                         })
                         .attr('startOffset', '50%')
@@ -349,7 +352,7 @@
                             var size = circleSize(o[i]);
                             var uid = Math.floor((1 + Math.random()) * 0x10000);
                             //layoutSize += size;
-                            
+
                             //dataSet.push({name: i, className: "root", size: size
                             dataSet.push({name: i, className: getClassName(parentName), size: size
                                 , uid: (uid), vOffset: vOffset, clicked: false, contents: o[i]});
@@ -388,10 +391,10 @@
             }
             return name;
         }
-        
-        function getTrainingClass(){
-        var name = "root";
-                if (document.getElementsByClassName(name).length === 0) {
+
+        function getTrainingClass() {
+            var name = "root";
+            if (document.getElementsByClassName(name).length === 0) {
                 var style = document.createElement('style');
                 style.type = 'text/css';
                 style.innerHTML = '.' + name + ' { fill: none; color: white; stroke: green;}';
@@ -458,9 +461,9 @@
 
         var request = new XMLHttpRequest();
         //request.open("GET", "MOCK_DATA.json", false);
-        //request.open("GET", "MOCK_PPV_DATA.json", false);
+        request.open("GET", "MOCK_PPV_DATA.json", false);
         //request.open("GET", "CRASH_DATA2.json", false);
-        request.open("GET", "TITANIC_MORT_DATA.json", false);
+        //request.open("GET", "TITANIC_MORT_DATA.json", false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
         evalFunction = new Function("obj", JSON_object.eval_function);

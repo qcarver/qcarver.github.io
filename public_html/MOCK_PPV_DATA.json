@@ -1,5 +1,5 @@
 {
-"eval_function":"return ((obj.Person.Disease != undefined) && (obj.Person.Disease.length > 1) && (obj.Person.Gender === 'Female') && (obj.Person.Partners > 2))",
+"eval_function":"return ((obj.Person.Disease != undefined) && (obj.Person.Disease.length > 1) && (obj.Person.Gender === 'Female'))",
 "test_data":[
 {"Person":{"Name":{"First":"Evyn","Last":"Meneur"},"Gender":"Male","Partners":2}},
 {"Person":{"Name":{"First":"Jobi","Last":"Babbage"},"Gender":"Female","Partners":1}},
