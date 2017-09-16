@@ -38,8 +38,8 @@
 </head>
 <body>
     <p id="score" class="score">Score: </p>
-<!--    <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
-    <script src="pubnubkeys.js"></script>-->
+    <!--    <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
+        <script src="pubnubkeys.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
     <script src="d3moji.js"></script>  
     <script>
@@ -52,6 +52,10 @@
                 maxRadius = minRadius * 6,
                 emojiSize = minRadius * .75,
                 transitTime = 30000;
+
+
+        var hits = 0;
+        var misses = 0;
 
 //                var width = window.innerWidth,
 //                height = window.innerHeight,
@@ -98,6 +102,8 @@
 
 
         function drawCluster(m) {
+            if (testLen < 0)
+                return;
             var object = JSON.parse(m);
             var jsonData = processData(m);
             layoutSize = 10;
@@ -272,7 +278,7 @@
                                 .style("stroke-width", 1)    // set the stroke width
                                 //.style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
                                 .style("fill-opacity", 0)
-                                .style("stroke-opacity", 1)
+                                .style("stroke-opacity", 1);
                     }
                 }
             });
@@ -292,16 +298,18 @@
             });
         }
 
-        var hits = 0;
-        var misses = 0;
 
         function processClick(hit) {
             console.log("click!");
             if (inTraining === false) {
-                if (testLen-- < 1) {
+                testLen--;
+                if (testLen < 0) {
                     //test is over
                     console.log("Test is over");
+                    clearTimeout(paceFunction);
+                    test_data = null;
                     publishScore();
+                    window.location.href = "https://qcarver.github.io";
                 }
             }
             if (hit === true) {
@@ -314,8 +322,9 @@
                         .attr("x", width / 4)
                         .attr("y", height / 4);
                 hits++;
-                if (inTraining && ( trainingLen-- < 1 )) {
-                    inTraining = false; 
+                trainingLen--;
+                if (inTraining && (trainingLen < 0)) {
+                    inTraining = false;
                     console.log("Training is over");
                 }
             } else {
@@ -441,7 +450,7 @@
 
         function circleSize(value) {
             if ((value.toString().toUpperCase() === "TRUE") ||
-                    (value.toString().toUpperCase() === "T")){
+                    (value.toString().toUpperCase() === "T")) {
                 value = 1;
             }
             var d = (isNaN(value) ? value.length : value);
@@ -508,8 +517,10 @@
 
 
         //main:
-        var trainingLen = 5;
-        var testLen = 5;
+        var paceFunction;
+        var BreakException = {};
+        var trainingLen = 2;
+        var testLen = 2;
         var inTraining = true;
         var request = new XMLHttpRequest();
         //request.open("GET", "MOCK_DATA.json", false);
@@ -522,8 +533,7 @@
         var i = 0;
         var test_data = [];
         test_data = JSON_object.test_data;
-        test_data.forEach(function (td, index) {
-           // if (testLen < 0) {
+            test_data.forEach(function (td, index) {
                 setTimeout(function () {
                     objAsString = JSON.stringify(td);
                     drawCluster(objAsString);
@@ -531,7 +541,7 @@
                 },
                         index * transitTime / 8);
             }
-       // }
         );
+
     </script>
 </body>
