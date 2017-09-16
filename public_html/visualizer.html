@@ -38,6 +38,8 @@
 </head>
 <body>
     <p id="score" class="score">Score: </p>
+<!--    <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
+    <script src="pubnubkeys.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
     <script src="d3moji.js"></script>  
     <script>
@@ -116,13 +118,17 @@
                     }) // new data is loaded to bubble layout
                     .radius(this.value)
                     .padding(3);
-            //console.log("bubble chart layout packed with size" + layoutSize);
-            // generate data with calculated layout values
-            jsonData.name = "training_circle";
-            jsonData.className = "train";
-            jsonData.contents = "click me!";
-            jsonData.uid = Math.floor((1 + Math.random()) * 0x10000);
-            var nodes = cluster.nodes(jsonData);
+            if ((inTraining) && (evalFunction(object))) {
+                jsonData.name = "training_circle";
+                jsonData.className = "train";
+                jsonData.contents = "click me!";
+                jsonData.uid = Math.floor((1 + Math.random()) * 0x10000);
+            }
+            var nodes = cluster.nodes(jsonData).filter(function (d) {
+                if (!d.children || d.name === "training_circle") {
+                    return true;
+                }
+            });
 
             //DATA JOIN: assign new data to existing DOM 
             var vis = chart.selectAll("g")
@@ -157,17 +163,17 @@
             // enter - only applies to incoming elements (once emptying data)	
             vis.append('circle')
                     .attr('r', function (d) {
-                        if (d.name === "training_circle"){
-                            d.r +=75;
+                        if (d.name === "training_circle") {
+                            d.r += 75;
                         }
                         return d.r; //the radius circle pack thinks this should be
                     })
                     .attr("id", function (d) {
                         return "circle-" + d.uid;
                     });
-                    
-                    
-            
+
+
+
 
             vis.append('emoji').filter(function (d) {
                 if (!d.children) {
@@ -220,7 +226,7 @@
                             return 'm' + (d.r * .05) + ',' + ((d.r * .95)) + ' '
                                     + 'a' + (d.r * .95) + ',' + (d.r * .95) + ' 0 0 0 '
                                     + (2 * (d.r * .95)) + ',0';
-                        
+
 
                         })
                         .style("fill", "none")
@@ -232,7 +238,7 @@
                 svgContainer.append('text')
                         .append('textPath')
                         .style("font-size", function (d) {
-                            var m = (d.name === "training_circle")? .2 : .6;
+                            var m = (d.name === "training_circle") ? .2 : .6;
                             return (d.r * m) + "px";
                         })
                         .attr('startOffset', '50%')
@@ -291,6 +297,13 @@
 
         function processClick(hit) {
             console.log("click!");
+            if (inTraining === false) {
+                if (testLen-- < 1) {
+                    //test is over
+                    console.log("Test is over");
+                    publishScore();
+                }
+            }
             if (hit === true) {
                 g.append("svg:image")
                         //.attr("xlink:href", "http://www.clker.com/cliparts/1/4/5/a/1331068897296558865Sitting%20Racoon.svg")
@@ -301,6 +314,10 @@
                         .attr("x", width / 4)
                         .attr("y", height / 4);
                 hits++;
+                if (inTraining && ( trainingLen-- < 1 )) {
+                    inTraining = false; 
+                    console.log("Training is over");
+                }
             } else {
                 g.append("svg:image")
                         .attr("xlink:href", "Red_x.svg")
@@ -349,7 +366,7 @@
                             var size = circleSize(o[i]);
                             var uid = Math.floor((1 + Math.random()) * 0x10000);
                             //layoutSize += size;
-                            
+
                             //dataSet.push({name: i, className: "root", size: size
                             dataSet.push({name: i, className: getClassName(parentName), size: size
                                 , uid: (uid), vOffset: vOffset, clicked: false, contents: o[i]});
@@ -388,10 +405,10 @@
             }
             return name;
         }
-        
-        function getTrainingClass(){
-        var name = "root";
-                if (document.getElementsByClassName(name).length === 0) {
+
+        function getTrainingClass() {
+            var name = "root";
+            if (document.getElementsByClassName(name).length === 0) {
                 var style = document.createElement('style');
                 style.type = 'text/css';
                 style.innerHTML = '.' + name + ' { fill: none; color: white; stroke: green;}';
@@ -423,6 +440,10 @@
         }
 
         function circleSize(value) {
+            if ((value.toString().toUpperCase() === "TRUE") ||
+                    (value.toString().toUpperCase() === "T")){
+                value = 1;
+            }
             var d = (isNaN(value) ? value.length : value);
             f = d3.scale.log().base(2).domain([Math.exp(0), Math.exp(7.5)]).range([minRadius, maxRadius])
 //            d = Math.ceil(Math.min(maxRadius + Math.log10(d), Math.max(minRadius, d / 2)));
@@ -456,25 +477,19 @@
             return hash;
         };
 
-        var request = new XMLHttpRequest();
-        //request.open("GET", "MOCK_DATA.json", false);
-        //request.open("GET", "MOCK_PPV_DATA.json", false);
-        //request.open("GET", "CRASH_DATA2.json", false);
-        request.open("GET", "TITANIC_MORT_DATA.json", false);
-        request.send(null);
-        var JSON_object = JSON.parse(request.responseText);
-        evalFunction = new Function("obj", JSON_object.eval_function);
-        var test_data = [];
-        test_data = JSON_object.test_data;
-        test_data.forEach(function (td, index) {
-            setTimeout(function () {
-                objAsString = JSON.stringify(td);
-                drawCluster(objAsString);
-                console.log("sending " + objAsString + " in " + index * (2000) + " ms");
-            },
-                    index * transitTime / 8);
+        function publishScore() {
+            var scoreString = "The score was hits: " + hits + ", misses: " + misses;
+            console.log("Publishing: " + scoreString);
+//            var publishConfig = {
+//                channel: "thesis",
+//                message: scoreString
+//            }
+//            pubnub.publish(publishConfig, function (status, response) {
+//                console.log(status, response);
+//            })
         }
-        );
+
+
 //pass in hex number as 6 char string
         function getInvertedColor(hex) {
             // invert color components
@@ -490,5 +505,33 @@
             var zeros = new Array(len).join('0');
             return (zeros + str).slice(-len);
         }
+
+
+        //main:
+        var trainingLen = 5;
+        var testLen = 5;
+        var inTraining = true;
+        var request = new XMLHttpRequest();
+        //request.open("GET", "MOCK_DATA.json", false);
+        //request.open("GET", "MOCK_PPV_DATA.json", false);
+        //request.open("GET", "CRASH_DATA2.json", false);
+        request.open("GET", "TITANIC_MORT_DATA.json", false);
+        request.send(null);
+        var JSON_object = JSON.parse(request.responseText);
+        evalFunction = new Function("obj", JSON_object.eval_function);
+        var i = 0;
+        var test_data = [];
+        test_data = JSON_object.test_data;
+        test_data.forEach(function (td, index) {
+           // if (testLen < 0) {
+                setTimeout(function () {
+                    objAsString = JSON.stringify(td);
+                    drawCluster(objAsString);
+                    console.log("sending " + objAsString + " in " + index * (2000) + " ms");
+                },
+                        index * transitTime / 8);
+            }
+       // }
+        );
     </script>
 </body>
