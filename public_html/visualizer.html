@@ -30,6 +30,7 @@
             fill: "none";
             stroke: green;
             stroke-width: 5;
+            stroke-opacity: 1;
             fill-opacity: 0;
             letter-spacing: 1em;
         }
@@ -38,8 +39,8 @@
 </head>
 <body>
     <p id="score" class="score">Score: </p>
-    <!--    <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
-        <script src="pubnubkeys.js"></script>-->
+    <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
+    <script src="pubnubkeys.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
     <script src="d3moji.js"></script>  
     <script>
@@ -57,15 +58,6 @@
         var hits = 0;
         var misses = 0;
 
-//                var width = window.innerWidth,
-//                height = window.innerHeight,
-//                maxRadius = 60,
-//                vOffset = 0,
-//                setupTime = 250,
-//                layoutSize = (Math.min(width, height)) / 3,
-//                minRadius = layoutSize / 8,
-//                emojiSize = minRadius,
-//                transitTime = 30000;
 
         var evalFunction = function () {
             return false;
@@ -130,6 +122,9 @@
                 jsonData.contents = "click me!";
                 jsonData.uid = Math.floor((1 + Math.random()) * 0x10000);
             }
+            if (jsonData.children.length > 0) {
+                jsonData.children[0].sentinel = true;
+            }
             var nodes = cluster.nodes(jsonData).filter(function (d) {
                 if (!d.children || d.name === "training_circle") {
                     return true;
@@ -157,14 +152,17 @@
                     .transition("enter")
                     .duration(transitTime / 2)
                     .attr('transform', function (d) {
-                        return 'translate(' + (d.x + (width * 1.1)) + ',' + (d.y + vOffset) + ')';
+                        return 'translate(' + (d.x + (width * .9)) + ',' + (d.y + vOffset) + ')';
                     })
                     .ease('linear')
-                    .transition("remove")
-                    .duration(0)
-                    .remove()
-                    ;
-            //training circle?
+                    .each("end", function (d) {
+                        if (d.sentinel === true) {
+                            console.log("d.sentinel is true ")
+                            processClick(!evalFunction(object));
+                        }
+                    })
+                    .remove();
+
 
             // enter - only applies to incoming elements (once emptying data)	
             vis.append('circle')
@@ -173,6 +171,13 @@
                             d.r += 75;
                         }
                         return d.r; //the radius circle pack thinks this should be
+                    })
+                    .attr('stroke-opacity', function (d) {
+                        if (d.name === "training_circle") {
+                            denominator = Math.max(1, hits);
+                            return 1 / denominator;
+                        } else
+                            return 1;
                     })
                     .attr("id", function (d) {
                         return "circle-" + d.uid;
@@ -247,6 +252,13 @@
                             var m = (d.name === "training_circle") ? .2 : .6;
                             return (d.r * m) + "px";
                         })
+                        .attr('stroke-opacity', function (d) {
+                            if (d.name === "training_circle") {
+                                denominator = Math.max(1, hits);
+                                return 1 / denominator;
+                            } else
+                                return 1;
+                        })
                         .attr('startOffset', '50%')
                         .attr("text-anchor", "middle")
                         .attr('xlink:href', function (d) {
@@ -289,13 +301,16 @@
                         return d.r + 60; // bigger than radius of visible objects
                     })
                     .style("fill", "white")
-                    .style("opacity", 0).on('click', function (d) {
-                processClick(evalFunction(object));
-                chart.selectAll("g")
-                        .data(nodes, function (d) {
-                            return d.uid;
-                        }).remove();
-            });
+                    .style("opacity", 0)
+                    .on('click', function (d) {
+                        processClick(evalFunction(object));
+                        chart.selectAll("g")
+                                .data(nodes, function (d) {
+                                    return d.uid;
+                                //MUST make transition w/ same name to CANX it
+                                }).transition("remove").remove();
+                    })
+                    ;
         }
 
 
@@ -323,9 +338,11 @@
                         .attr("y", height / 4);
                 hits++;
                 trainingLen--;
-                if (inTraining && (trainingLen < 0)) {
-                    inTraining = false;
-                    console.log("Training is over");
+                if (inTraining) {
+                    if (trainingLen < 0) {
+                        inTraining = false;
+                        console.log("Training is over");
+                    }
                 }
             } else {
                 g.append("svg:image")
@@ -345,6 +362,20 @@
                     "Score: " +
                     "<m style='color:red;'>" + misses + ": </m>" +
                     "<h style='color:green;'>" + hits + "</h>";
+        }
+
+        function endall(transition, wouldBeHit) {
+            console.log("Transition id = " + transition.id);
+            var n = 0;
+            transition
+                    .each(function () {
+                        ++n;
+                    })
+                    .each("end", function () {
+                        if (!--n)
+                            console.log("endall called");
+                        processClick(!wouldBeHit);
+                    });
         }
 
         function processData(data) {
@@ -489,13 +520,13 @@
         function publishScore() {
             var scoreString = "The score was hits: " + hits + ", misses: " + misses;
             console.log("Publishing: " + scoreString);
-//            var publishConfig = {
-//                channel: "thesis",
-//                message: scoreString
-//            }
-//            pubnub.publish(publishConfig, function (status, response) {
-//                console.log(status, response);
-//            })
+            var publishConfig = {
+                channel: "thesis",
+                message: scoreString
+            }
+            pubnub.publish(publishConfig, function (status, response) {
+                console.log(status, response);
+            })
         }
 
 
@@ -519,13 +550,16 @@
         //main:
         var paceFunction;
         var BreakException = {};
-        var trainingLen = 2;
-        var testLen = 2;
+        var trainingLen = 5;
+        var testLen = 10;
         var inTraining = true;
         var request = new XMLHttpRequest();
         //request.open("GET", "MOCK_DATA.json", false);
         //request.open("GET", "MOCK_PPV_DATA.json", false);
         //request.open("GET", "CRASH_DATA2.json", false);
+        var pos = location.href.indexOf("?");
+        query = location.href.substr(pos + 1);
+        console.log("This was passed in: " + query);
         request.open("GET", "TITANIC_MORT_DATA.json", false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
@@ -533,14 +567,14 @@
         var i = 0;
         var test_data = [];
         test_data = JSON_object.test_data;
-            test_data.forEach(function (td, index) {
-                setTimeout(function () {
-                    objAsString = JSON.stringify(td);
-                    drawCluster(objAsString);
-                    console.log("sending " + objAsString + " in " + index * (2000) + " ms");
-                },
-                        index * transitTime / 8);
-            }
+        test_data.forEach(function (td, index) {
+            setTimeout(function () {
+                objAsString = JSON.stringify(td);
+                drawCluster(objAsString);
+                console.log("sending " + objAsString + " in " + index * (2000) + " ms");
+            },
+                    index * transitTime / 8);
+        }
         );
 
     </script>
