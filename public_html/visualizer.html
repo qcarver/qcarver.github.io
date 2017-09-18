@@ -158,7 +158,7 @@
                     .each("end", function (d) {
                         if (d.sentinel === true) {
                             console.log("d.sentinel is true ")
-                            processClick(!evalFunction(object),true);
+                            processClick(!evalFunction(object), true);
                         }
                     })
                     .remove();
@@ -303,11 +303,11 @@
                     .style("fill", "white")
                     .style("opacity", 0)
                     .on('click', function (d) {
-                        processClick(evalFunction(object),false);
+                        processClick(evalFunction(object), false);
                         chart.selectAll("g")
                                 .data(nodes, function (d) {
                                     return d.uid;
-                                //MUST make transition w/ same name to CANX it
+                                    //MUST make transition w/ same name to CANX it
                                 }).transition("remove").remove();
                     })
                     ;
@@ -316,23 +316,9 @@
 
         function processClick(hit, onRemove) {
             console.log("click!");
-            hOffset = (onRemove)? width : width * .6 ;
-            hOffset -= height/2;
-            if (inTraining === false) {
-                testLen--;
-                            document.getElementById('score').innerHTML =
-                    "Score: " +
-                    "<m style='color:red;'>" + misses + ": </m>" +
-                    "<h style='color:green;'>" + hits + "</h>";
-                if (testLen < 0) {
-                    //test is over
-                    console.log("Test is over");
-                    clearTimeout(paceFunction);
-                    test_data = null;
-                    publishScore();
-                    window.location.href = "https://qcarver.github.io";
-                }
-            }
+            hOffset = (onRemove) ? width : width * .6;
+            hOffset -= height / 2;
+
             if (hit === true) {
                 g.append("svg:image")
                         //.attr("xlink:href", "http://www.clker.com/cliparts/1/4/5/a/1331068897296558865Sitting%20Racoon.svg")
@@ -347,7 +333,8 @@
                 if (inTraining) {
                     if (trainingLen < 0) {
                         inTraining = false;
-                        hits = 0; misses = 0;
+                        hits = 0;
+                        misses = 0;
                         chart.selectAll("g").transition("remove").remove();
                         document.getElementById('score').innerHTML = "Click on groups that match the pattern from training";
                         console.log("Training is over");
@@ -366,7 +353,21 @@
             setTimeout(function () {
                 d3.select("#feedback-1").remove();
             }, 100);
-
+            if (inTraining === false) {
+                testLen--;
+                document.getElementById('score').innerHTML =
+                        "Score: " +
+                        "<m style='color:red;'>" + misses + ": </m>" +
+                        "<h style='color:green;'>" + hits + "</h>";
+                if (testLen < 0) {
+                    //test is over
+                    console.log("Test is over");
+                    clearTimeout(paceFunction);
+                    test_data = null;
+                    publishScore();
+                    window.location.href = "https://qcarver.github.io";
+                }
+            }
 
         }
 
@@ -511,14 +512,16 @@
 
         function publishScore() {
             var scoreString = "The score was hits: " + hits + ", misses: " + misses;
-            console.log("Publishing: " + scoreString);
-            var publishConfig = {
-                channel: "thesis",
-                message: scoreString
+            if (query !== "empty") {
+                console.log("Publishing: " + scoreString);
+                var publishConfig = {
+                    channel: "thesis",
+                    message: scoreString
+                };
+                pubnub.publish(publishConfig, function (status, response) {
+                    console.log(status, response);
+                });
             }
-            pubnub.publish(publishConfig, function (status, response) {
-                console.log(status, response);
-            })
         }
 
 
@@ -545,13 +548,16 @@
         var trainingLen = 5;
         var testLen = 10;
         var inTraining = true;
+        var query = "empty";
         var request = new XMLHttpRequest();
         //request.open("GET", "MOCK_DATA.json", false);
         //request.open("GET", "MOCK_PPV_DATA.json", false);
         //request.open("GET", "CRASH_DATA2.json", false);
         var pos = location.href.indexOf("?");
-        query = location.href.substr(pos + 1);
-        console.log("This was passed in: " + query);
+        if (pos === -1) {
+            query = location.href.substr(pos + 1);
+            console.log("This was passed in: " + query);
+        }
         request.open("GET", "TITANIC_MORT_DATA.json", false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
