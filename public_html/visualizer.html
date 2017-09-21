@@ -42,6 +42,7 @@
     <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
     <script src="pubnubkeys.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src="d3moji.js"></script>  
     <script>
         var width = window.innerWidth,
@@ -53,6 +54,8 @@
                 maxRadius = minRadius * 6,
                 emojiSize = minRadius * .75,
                 transitTime = 30000;
+        topic = "thesis";
+        pubkey = "";
 
 
         var hits = 0;
@@ -512,7 +515,7 @@
 
         function publishScore() {
             var scoreString = "The score was hits: " + hits + ", misses: " + misses;
-            if (query !== "empty") {
+            if (pubnub !== "empty") {
                 console.log("Publishing: " + scoreString);
                 var publishConfig = {
                     channel: "thesis",
@@ -542,7 +545,11 @@
         }
 
 
+
+
         //main:
+        var pubnub = "empty";
+        var datafile = "TITANIC_MORT_DATA.json";
         var paceFunction;
         var BreakException = {};
         var trainingLen = 5;
@@ -553,12 +560,22 @@
         //request.open("GET", "MOCK_DATA.json", false);
         //request.open("GET", "MOCK_PPV_DATA.json", false);
         //request.open("GET", "CRASH_DATA2.json", false);
-        var pos = location.href.indexOf("?");
-        if (pos === -1) {
-            query = location.href.substr(pos + 1);
+        var p1 = location.href.indexOf("?");
+        var p2 = location.href.indexOf("-");
+        if ((p1 !== -1) && (p2 !== -1)) {
+            //make the key w/ whats between ? and -
+            query = location.href.substr(p1 + 1, p2);
             console.log("This was passed in: " + query);
+            var encryptedPublishKey = '7075622d632d38353836396562362d316663302d346232622d613264652d303739396166643363663735'
+            var decryptedPublishKey = CryptoJS.AES.decrypt(encryptedPublishKey, query);
+            var pubnub = new PubNub({
+                publishKey: decryptedPublishKey});
+            datafile = location.href.substr(p2 + 1);
+        } else if ((p1 !== -1) && (p2 == -1)){
+            //no publishing but get test data set name
+            datafile = location.href.substr(p1 + 1);
         }
-        request.open("GET", "TITANIC_MORT_DATA.json", false);
+        request.open("GET", datafile , false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
         evalFunction = new Function("obj", JSON_object.eval_function);
