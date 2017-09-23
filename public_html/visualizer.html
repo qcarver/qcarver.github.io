@@ -41,6 +41,7 @@
     <p id="score" class="score">Training... </p>
     <script src=https://cdn.pubnub.com/sdk/javascript/pubnub.4.0.11.min.js></script>
     <script src="pubnubkeys.js"></script>
+    <script src="fingerprint.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <script src="d3moji.js"></script>  
@@ -368,7 +369,7 @@
                     console.log("Test is over");
                     clearTimeout(paceFunction);
                     test_data = null;
-                    window.alert("End of this dataset");
+                    //window.alert("End of this dataset");
                     window.location.href = "https://qcarver.github.io";
                 }
             }
@@ -515,7 +516,13 @@
         };
 
         function publishScore() {
-            var scoreString = "The score was correct: " + hits + ", incorrect: " + misses;
+            var fingerPrint = new Fingerprint().get();
+            var date = new Date();
+            var scoreString = "Correct: " + hits + ", incorrect: " + misses + ", " +
+            date.getMonth() + "/" + date.getDay() + "/" + date.getFullYear() + ", " +
+                    date.getHours() + ":" + date.getMinutes() + "." + date.getSeconds() +
+                    " TZoffset: " + date.getTimezoneOffset()/60 + ", uid: " + fingerPrint;
+
             if (pubnub !== "empty") {
                 console.log("Publishing: " + scoreString);
                 var publishConfig = {
@@ -550,7 +557,7 @@
 
         //main:
         var pubnub = "empty";
-        var datafile = "TITANIC_MORT_DATA.json";
+        var datafile = "CRASH_DATA.json";//TITANIC_MORT_DATA.json";
         var paceFunction;
         var BreakException = {};
         var trainingLen = 5;
@@ -576,11 +583,11 @@
                 subscribeKey: decryptedSubscribeKey.toString(CryptoJS.enc.Utf8)
             });
             datafile = location.href.substr(p2 + 1);
-            //publishScore(); //quick test to see if this works
         } else if ((p1 !== -1) && (p2 == -1)) {
             //no publishing but get test data set name
             datafile = location.href.substr(p1 + 1);
         }
+        publishScore(); //quick test to see if this works
         request.open("GET", datafile, false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
