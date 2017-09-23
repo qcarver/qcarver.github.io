@@ -364,10 +364,11 @@
                         "<h style='color:green;'>" + hits + "</h>";
                 if (testLen < 0) {
                     //test is over
+                    publishScore();
                     console.log("Test is over");
                     clearTimeout(paceFunction);
                     test_data = null;
-                    publishScore();
+                    window.alert("End of this dataset");
                     window.location.href = "https://qcarver.github.io";
                 }
             }
@@ -514,7 +515,7 @@
         };
 
         function publishScore() {
-            var scoreString = "The score was hits: " + hits + ", misses: " + misses;
+            var scoreString = "The score was correct: " + hits + ", incorrect: " + misses;
             if (pubnub !== "empty") {
                 console.log("Publishing: " + scoreString);
                 var publishConfig = {
@@ -564,18 +565,23 @@
         var p2 = location.href.indexOf("-");
         if ((p1 !== -1) && (p2 !== -1)) {
             //make the key w/ whats between ? and -
-            query = location.href.substr(p1 + 1, p2);
+            query = location.href.substring(p1 + 1, p2);
             console.log("This was passed in: " + query);
-            var encryptedPublishKey = '7075622d632d38353836396562362d316663302d346232622d613264652d303739396166643363663735'
-            var decryptedPublishKey = CryptoJS.AES.decrypt(encryptedPublishKey, query);
+            var encryptedPublishKey = 'U2FsdGVkX1/g6q5ZZO2ZGnWFmOm3o0cglx0sUMZs44CfHUcGHZXdkyqLGGLx9U750JRjWtp7yJzC+gRbderBDQ==';
+            var encryptedSubscribeKey = 'U2FsdGVkX1/vD2215lR64jaxTryrvL5aWIrZ4v/DmQFMcu8tB8dRxHolXwNOSRxfgXkAIU1IbhTuw/vyF03LHQ==';
+            var decryptedPublishKey = CryptoJS.AES.decrypt(encryptedPublishKey.toString(), query);
+            var decryptedSubscribeKey = CryptoJS.AES.decrypt(encryptedSubscribeKey.toString(), query);
             var pubnub = new PubNub({
-                publishKey: decryptedPublishKey});
+                publishKey: decryptedPublishKey.toString(CryptoJS.enc.Utf8),
+                subscribeKey: decryptedSubscribeKey.toString(CryptoJS.enc.Utf8)
+            });
             datafile = location.href.substr(p2 + 1);
-        } else if ((p1 !== -1) && (p2 == -1)){
+            //publishScore(); //quick test to see if this works
+        } else if ((p1 !== -1) && (p2 == -1)) {
             //no publishing but get test data set name
             datafile = location.href.substr(p1 + 1);
         }
-        request.open("GET", datafile , false);
+        request.open("GET", datafile, false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
         evalFunction = new Function("obj", JSON_object.eval_function);
