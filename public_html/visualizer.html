@@ -273,23 +273,21 @@
                         });
             });
 
-
-
-
-            vis.filter(function (d) {
+            vis.filter(function (d) {                       //TODO: we are drawing rings for the radius here.. should be the value
                 return !isNaN(d.contents);
             }).each(function (d) {
                 //draw rings for number size
                 console.log("###d.r is :" + d.r + " for field named: " + d.name);
                 this_uid = d.uid;
-                var sizeAsBinaryString = d.r.toString(2).split('.', 1)[0];
-                for (var i = 0; i < sizeAsBinaryString.length; i++) {
-                    if (sizeAsBinaryString[sizeAsBinaryString.length - i] === "1") {
+                //var sizeAsBinaryString = d.contents.toString(2).split('.', 1)[0];
+                var numRings = Math.min(d.contents,210);
+                for (var i = 0; i < numRings; i++) {
+                    if (i%8 === 0) {
                         chart.selectAll("g").filter(function (d) {
                             return d.uid === this_uid;
                         }).append('circle')
                                 .attr('r', function (d) {
-                                    return ((i * (d.r - emojiSize / 2) / sizeAsBinaryString.length) + (emojiSize / 2)); //the radius circle pack thinks this should be
+                                    return ((i * (d.r - emojiSize) / numRings) + (emojiSize)); //the radius circle pack thinks this should be
                                 })
                                 .style("stroke-width", 1)    // set the stroke width
                                 //.style("stroke", "#293950")      // set the line colour ..hardcoded to bg color
@@ -557,11 +555,11 @@
 
         //main:
         var pubnub = "empty";
-        var datafile = "CRASH_DATA.json";//TITANIC_MORT_DATA.json";
+        var datafile = "MOCK_PPV_DATA.json";//"CRASH_DATA.json";//"TITANIC_MORT_DATA.json";"MOCK_PPV_DATA.json";
         var paceFunction;
         var BreakException = {};
         var trainingLen = 5;
-        var testLen = 10;
+        var testLen = 20;
         var inTraining = true;
         var query = "empty";
         var request = new XMLHttpRequest();
@@ -587,7 +585,7 @@
             //no publishing but get test data set name
             datafile = location.href.substr(p1 + 1);
         }
-        publishScore(); //quick test to see if this works
+        //publishScore(); //quick test to see if this works
         request.open("GET", datafile, false);
         request.send(null);
         var JSON_object = JSON.parse(request.responseText);
