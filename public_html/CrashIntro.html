@@ -38,12 +38,24 @@
     }
 </style>
 <!-- ######## This is a comment, visible only in the source editor  ######## -->
-<h1 style="color: #4485b8;">Crash Report</h1>
+<h1 style="color: #4485b8;">2 of 3: Crash Report</h1>
 <p><span style="font-weight: 400;">In a hypothetical deterministic study a civil engineer notices that the most dangerous traffic accidents happen when more than one vehicle is involved. On the next page, please help identify accidents with more than one vehicle.</span></p>
 <div style="text-align: center"><img src="TrafMortEg.png" height="300" alt="previously diagnosed diseases are represented by the palm tree, number of partners is determined by the diameter around the joystick, gender is represented by the moon" align="middle" ></div>
 <p><span style="font-weight: 400;">You will be presented with a short interactive training period that will demonstrate what correct answers look like. The actual test will begin immediately after the training and look very similar but without hints. Once you click start, there is no pause, but the entire test will take less than two minutes.</span></p>
 
-
-<p style="text-align: center;"><span style="text-decoration: underline;"><strong><a href='public_html/visualizer.html'>Demonstration</a></strong></span></p>
+<p style="text-align: center;"><button onclick="goToPage()">Start!</button></p>
 <hr />
 <p><span style="color: #999999; font-weight: 400; font-size: .7em">Carver Q., 2017 "A Context-Free Method of Visualizing Streaming Object Data for the Purpose of Identifying Known-Events: an Implementation and Analysis", Ms, Comp Sci. Thesis, Florida Institue of Technology</span></p>
+<script>
+    var p1 = location.href.indexOf("?");
+    var password = location.href.substring(p1 + 1);
+    var b1  = location.href.lastIndexOf("/");
+    var baseUrl = location.href.substring(0,b1)
+    var nextTestUrl = baseUrl + "/visualizer.html?" + password + "-Test_2_of_3";
+    console.log("next page will be: " + nextTestUrl);
+    
+    function goToPage(){
+         window.location.href = nextTestUrl;
+    }
+
+</script>

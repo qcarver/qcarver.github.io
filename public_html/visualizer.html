@@ -368,7 +368,7 @@
                     clearTimeout(paceFunction);
                     test_data = null;
                     //window.alert("End of this dataset");
-                    window.location.href = "https://qcarver.github.io";
+                    window.location.href = getNextPage();//"https://qcarver.github.io";
                 }
             }
 
@@ -550,18 +550,37 @@
             return (zeros + str).slice(-len);
         }
 
-
-
+        function getDataFile(){
+            if (currTest === "Test_1_of_3") return "MOCK_PPV_DATA.json";
+            if (currTest === "Test_2_of_3") return "CRASH_DATA.json";
+            if (currTest === "Test_3_of_3") return "TITANIC_MORT_DATA.json";
+            return "MOCK_PPV_DATA.json";
+        }
+        
+        function getNextTest(){
+            if (currTest === "Test_1_of_3") return "/CrashIntro.html?";
+            if (currTest === "Test_2_of_3") return "/TitanicIntro.html?";
+            return "/Thank_You.html?";
+        }
+        
+        function getNextPage(){
+            var b1  = location.href.lastIndexOf("/");
+            var baseUrl = location.href.substring(0,b1);
+            var nextTestUrl = baseUrl + getNextTest() + pdub;
+            console.log("next page will be: " + nextTestUrl);
+            return nextTestUrl;
+        }
 
         //main:
         var pubnub = "empty";
-        var datafile = "MOCK_PPV_DATA.json";//"CRASH_DATA.json";//"TITANIC_MORT_DATA.json";"MOCK_PPV_DATA.json";
+        var datafile = "CRASH_DATA.json";//"TITANIC_MORT_DATA.json";"MOCK_PPV_DATA.json";
         var paceFunction;
         var BreakException = {};
         var trainingLen = 5;
         var testLen = 20;
         var inTraining = true;
-        var query = "empty";
+        var pdub = "empty";
+        var currTest = "empty";
         var request = new XMLHttpRequest();
         //request.open("GET", "MOCK_DATA.json", false);
         //request.open("GET", "MOCK_PPV_DATA.json", false);
@@ -570,20 +589,22 @@
         var p2 = location.href.indexOf("-");
         if ((p1 !== -1) && (p2 !== -1)) {
             //make the key w/ whats between ? and -
-            query = location.href.substring(p1 + 1, p2);
-            console.log("This was passed in: " + query);
+            pdub = location.href.substring(p1 + 1, p2);
+            console.log("This was passed in: " + pdub);
             var encryptedPublishKey = 'U2FsdGVkX1/g6q5ZZO2ZGnWFmOm3o0cglx0sUMZs44CfHUcGHZXdkyqLGGLx9U750JRjWtp7yJzC+gRbderBDQ==';
             var encryptedSubscribeKey = 'U2FsdGVkX1/vD2215lR64jaxTryrvL5aWIrZ4v/DmQFMcu8tB8dRxHolXwNOSRxfgXkAIU1IbhTuw/vyF03LHQ==';
-            var decryptedPublishKey = CryptoJS.AES.decrypt(encryptedPublishKey.toString(), query);
-            var decryptedSubscribeKey = CryptoJS.AES.decrypt(encryptedSubscribeKey.toString(), query);
+            var decryptedPublishKey = CryptoJS.AES.decrypt(encryptedPublishKey.toString(), pdub);
+            var decryptedSubscribeKey = CryptoJS.AES.decrypt(encryptedSubscribeKey.toString(), pdub);
             var pubnub = new PubNub({
                 publishKey: decryptedPublishKey.toString(CryptoJS.enc.Utf8),
                 subscribeKey: decryptedSubscribeKey.toString(CryptoJS.enc.Utf8)
             });
-            datafile = location.href.substr(p2 + 1);
-        } else if ((p1 !== -1) && (p2 == -1)) {
+            currTest = location.href.substr(p2 + 1)
+            datafile = getDataFile();
+        } else if ((p1 !== -1) && (p2 === -1)) {
             //no publishing but get test data set name
-            datafile = location.href.substr(p1 + 1);
+            currTest = location.href.substr(p1 + 1);
+            datafile = getDataFile();
         }
         //publishScore(); //quick test to see if this works
         request.open("GET", datafile, false);

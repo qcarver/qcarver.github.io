@@ -38,13 +38,11 @@
     }
 </style>
 <!-- ######## This is a comment, visible only in the source editor  ######## -->
-<h1 style="color: #4485b8;">1 of 3: Cancer Study</h1>
-<p><span style="font-weight: 400;">In a hypothetical deterministic study a biologist notices that cervical cancer is more prevalent in women who are sexually active and have been diagnosed with two or more related diseases. On the next page, please help identify these subjects.</span></p>
-<div style="text-align: center"><img src="PPVeg.png" height="300" alt="previously diagnosed diseases are represented by the palm tree, number of partners is determined by the diameter around the joystick, gender is represented by the moon" align="middle" ></div>
-<p><span style="font-weight: 400;">You will be presented with a short interactive training period that will demonstrate what correct answers look like. The actual test will begin immediately after the training and look very similar but without hints. Once you click start, there is no pause, but the entire test will take less than two minutes.</span></p>
+<h1 style="color: #4485b8;">Thank You!</h1>
+<p><span style="font-weight: 400;">...for your participation.</span></p>
 
 
-<p style="text-align: center;"><button onclick="goToPage()">Start!</button></p>
+<p style="text-align: center;"><button onclick="goToPage()">Forward Link To Colleague?</button></p>
 <hr />
 <p><span style="color: #999999; font-weight: 400; font-size: .7em">Carver Q., 2017 "A Context-Free Method of Visualizing Streaming Object Data for the Purpose of Identifying Known-Events: an Implementation and Analysis", Ms, Comp Sci. Thesis, Florida Institue of Technology</span></p>
 <script>
@@ -52,11 +50,13 @@
     var password = location.href.substring(p1 + 1);
     var b1  = location.href.lastIndexOf("/");
     var baseUrl = location.href.substring(0,b1)
-    var nextTestUrl = baseUrl + "/visualizer.html?" + password + "-Test_1_of_3";
-    console.log("next page will be: " + nextTestUrl);
+    var b2 = baseUrl.lastIndexOf("/")
+    var nextTestUrl = baseUrl + "/index.html?" + password;
     
+    var subject = "Can you participate in a 6 minute Masters Thesis study?"
+    var body = "Dear Sir/Madam,  Can you participate in a 6 minute Masters Thesis study on the topic of object data visualization? The url to the study is " + nextTestUrl;
     function goToPage(){
-         window.location.href = nextTestUrl;
+         window.location.href = "mailto:user@example.com?subject=" + subject + "&body=" + body;
     }
 
 </script>

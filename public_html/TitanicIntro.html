@@ -8,6 +8,7 @@
         margin: 10%;
         background: #293950;
         color: #ecf0f0;
+        margin-top: 20px;
     }
     
     section {
@@ -37,12 +38,24 @@
     }
 </style>
 <!-- ######## This is a comment, visible only in the source editor  ######## -->
-<h1 style="color: #4485b8;">Maiden Voyage</h1>
-<p><span style="font-weight: 400;">In a hypothetical study a data analyst notices that on the maiden voyage of RMS Titanic young women under the age of 27 who paid a premium price for their ticket typically survived. On the next page, please help identify these passengers</span></p>
+<h1 style="color: #4485b8;">3 of 3: Maiden Voyage</h1>
+<p><span style="font-weight: 400;">In a hypothetical deterministic study a historian notices that on the maiden voyage of RMS Titanic young women under the age of 27 who paid a premium price for their ticket typically survived. On the next page, please help identify these passengers</span></p>
 <div style="text-align: center"><img src="TitanicMortEg.png" alt="Age is represented by the Panda, ticket fare by the Knife, gender is given under the blue 'D'" align="middle" ></div>
 <p><span style="font-weight: 400;">You will be presented with a short interactive training period that will demonstrate what correct answers look like. The actual test will begin immediately after the training and look very similar but without hints. Once you click start, there is no pause, but the entire test will take less than two minutes.</span></p>
 
-
-<p style="text-align: center;"><span style="text-decoration: underline;"><strong><a href='public_html/visualizer.html'>Demonstration</a></strong></span></p>
+<p style="text-align: center;"><button onclick="goToPage()">Start!</button></p>
 <hr />
 <p><span style="color: #999999; font-weight: 400; font-size: .7em">Carver Q., 2017 "A Context-Free Method of Visualizing Streaming Object Data for the Purpose of Identifying Known-Events: an Implementation and Analysis", Ms, Comp Sci. Thesis, Florida Institue of Technology</span></p>
+<script>
+    var p1 = location.href.indexOf("?");
+    var password = location.href.substring(p1 + 1);
+    var b1  = location.href.lastIndexOf("/");
+    var baseUrl = location.href.substring(0,b1)
+    var nextTestUrl = baseUrl + "/visualizer.html?" + password + "-Test_3_of_3";
+    console.log("next page will be: " + nextTestUrl);
+    
+    function goToPage(){
+         window.location.href = nextTestUrl;
+    }
+
+</script>
