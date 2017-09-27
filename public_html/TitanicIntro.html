@@ -24,23 +24,15 @@
         color: gold;
     }
 
-    p.score {
-        font-weight: normal;
-        font-size: 2.4em;
-        text-align: center;   
-    }
 
-    misses {
-        color: red;
-    }
-    hits {
-        color: green;
+    popup {
+        color: yellow;
     }
 </style>
 <!-- ######## This is a comment, visible only in the source editor  ######## -->
 <h1 style="color: #4485b8;">3 of 3: Maiden Voyage</h1>
 <p><span style="font-weight: 400;">In a hypothetical deterministic study a historian notices that on the maiden voyage of RMS Titanic young women under the age of 27 who paid a premium price for their ticket typically survived. On the next page, please help identify these passengers</span></p>
-<div style="text-align: center"><img src="TitanicMortEgMarkup.png" alt="Age is represented by the Panda, ticket fare by the Knife, gender is given under the blue 'D'" align="middle" ></div>
+<div id="parent" style="text-align: center"><img src="TitanicMortEgMarkup.png" height="300" alt="example" align="middle" ><div id="popup" style="display: none"><popup>Age is represented by the Panda. The ticket fare by the Knife. Both the age and the ticket price are numbers and their values are depicted by the radius around the icon and the number of rings present. Gender is given as an enumerator under the blue 'D'</popup></div></div>
 <p><span style="font-weight: 400;">You will be presented with a short interactive training period that will demonstrate what correct answers look like. The actual test will begin immediately after the training and look very similar but without hints. Once you click start, there is no pause, but the entire test will take less than two minutes.</span></p>
 
 <p style="text-align: center;"><button onclick="goToPage()">Start!</button></p>
@@ -57,5 +49,13 @@
     function goToPage(){
          window.location.href = nextTestUrl;
     }
+     var e = document.getElementById('parent');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
+
 
 </script>

@@ -280,9 +280,9 @@
                 console.log("###d.r is :" + d.r + " for field named: " + d.name);
                 this_uid = d.uid;
                 //var sizeAsBinaryString = d.contents.toString(2).split('.', 1)[0];
-                var numRings = Math.min(d.contents,210);
+                var numRings = Math.min(d.contents, 210);
                 for (var i = 0; i < numRings; i++) {
-                    if (i%8 === 0) {
+                    if (i % 8 === 0) {
                         chart.selectAll("g").filter(function (d) {
                             return d.uid === this_uid;
                         }).append('circle')
@@ -363,12 +363,11 @@
                         "<h style='color:green;'>" + hits + "</h>";
                 if (testLen < 0) {
                     //test is over
-                    publishScore();
                     console.log("Test is over");
                     clearTimeout(paceFunction);
                     test_data = null;
-                    //window.alert("End of this dataset");
-                    window.location.href = getNextPage();//"https://qcarver.github.io";
+                    publishScore();
+                    //publishScore method will close the window
                 }
             }
 
@@ -515,11 +514,9 @@
 
         function publishScore() {
             var fingerPrint = new Fingerprint().get();
-            var date = new Date();
+            var date = new Date().toString();
             var scoreString = "Correct: " + hits + ", incorrect: " + misses + ", " +
-            date.getMonth() + "/" + date.getDay() + "/" + date.getFullYear() + ", " +
-                    date.getHours() + ":" + date.getMinutes() + "." + date.getSeconds() +
-                    " TZoffset: " + date.getTimezoneOffset()/60 + ", uid: " + fingerPrint;
+                    date + ", test: " + currTest + ", uid: " + fingerPrint;
 
             if (pubnub !== "empty") {
                 console.log("Publishing: " + scoreString);
@@ -528,7 +525,17 @@
                     message: scoreString
                 };
                 pubnub.publish(publishConfig, function (status, response) {
-                    console.log(status, response);
+                    //wait till we get a response from pubnub before closing the page
+                    if (status.error) {
+                        // handle error
+                        console.log(status)
+                        window.location.href = getNextPage();//"https://qcarver.github.io";
+
+                    } else {
+                        console.log("message Published w/ timetoken", response.timetoken)
+                        window.location.href = getNextPage();//"https://qcarver.github.io";
+                    }
+
                 });
             }
         }
@@ -550,22 +557,27 @@
             return (zeros + str).slice(-len);
         }
 
-        function getDataFile(){
-            if (currTest === "Test_1_of_3") return "MOCK_PPV_DATA.json";
-            if (currTest === "Test_2_of_3") return "CRASH_DATA.json";
-            if (currTest === "Test_3_of_3") return "TITANIC_MORT_DATA.json";
+        function getDataFile() {
+            if (currTest === "Test_1_of_3")
+                return "MOCK_PPV_DATA.json";
+            if (currTest === "Test_2_of_3")
+                return "CRASH_DATA.json";
+            if (currTest === "Test_3_of_3")
+                return "TITANIC_MORT_DATA.json";
             return "MOCK_PPV_DATA.json";
         }
-        
-        function getNextTest(){
-            if (currTest === "Test_1_of_3") return "/CrashIntro.html?";
-            if (currTest === "Test_2_of_3") return "/TitanicIntro.html?";
+
+        function getNextTest() {
+            if (currTest === "Test_1_of_3")
+                return "/CrashIntro.html?";
+            if (currTest === "Test_2_of_3")
+                return "/TitanicIntro.html?";
             return "/Thank_You.html?";
         }
-        
-        function getNextPage(){
-            var b1  = location.href.lastIndexOf("/");
-            var baseUrl = location.href.substring(0,b1);
+
+        function getNextPage() {
+            var b1 = location.href.lastIndexOf("/");
+            var baseUrl = location.href.substring(0, b1);
             var nextTestUrl = baseUrl + getNextTest() + pdub;
             console.log("next page will be: " + nextTestUrl);
             return nextTestUrl;

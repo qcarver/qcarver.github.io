@@ -24,23 +24,24 @@
         color: gold;
     }
 
-    p.score {
-        font-weight: normal;
-        font-size: 2.4em;
-        text-align: center;   
+    popup {
+        color: yellow;
     }
 
-    misses {
-        color: red;
-    }
-    hits {
-        color: green;
-    }
+    
+    #parent #popup {
+  display: none;
+}
+
+#parent:hover #popup {
+  display: block;
+}
 </style>
 <!-- ######## This is a comment, visible only in the source editor  ######## -->
 <h1 style="color: #4485b8;">1 of 3: Cancer Study</h1>
 <p><span style="font-weight: 400;">In a hypothetical deterministic study a biologist notices that cervical cancer is more prevalent in women who are sexually active and have been diagnosed with two or more related diseases. On the next page, please help identify these subjects.</span></p>
-<div style="text-align: center"><img src="CancerEgMarkedUp.png" height="300" alt="previously diagnosed diseases are represented by the palm tree, number of partners is determined by the diameter around the joystick, gender is represented by the moon" align="middle" ></div>
+<div id="parent" style="text-align: center"><img src="CancerEgMarkedup.png" height="300" alt="example" align="middle" ><div id="popup" style="display: none"><popup>The tool randomly hashes field names to emoji icons found on the internet. In this case diagnosed diseases are represented by the palm tree, sexual activity and number of partners is determined by the diameter around the joystick, and gender is represented by the moon.</popup></div>
+</div>
 <p><span style="font-weight: 400;">You will be presented with a short interactive training period that will demonstrate what correct answers look like. The actual test will begin immediately after the training and look very similar but without hints. Once you click start, there is no pause, but the entire test will take less than two minutes.</span></p>
 
 
@@ -58,5 +59,12 @@
     function goToPage(){
          window.location.href = nextTestUrl;
     }
+    var e = document.getElementById('parent');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
 
 </script>
