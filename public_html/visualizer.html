@@ -338,7 +338,6 @@
                         hits = 0;
                         misses = 0;
                         chart.selectAll("g").transition("remove").remove();
-                        document.getElementById('score').innerHTML = "Click on groups that match the pattern from training";
                         console.log("Training is over");
                     }
                 }
@@ -359,8 +358,8 @@
                 testLen--;
                 document.getElementById('score').innerHTML =
                         "Score: " +
-                        "<m style='color:red;'>" + misses + ": </m>" +
-                        "<h style='color:green;'>" + hits + "</h>";
+                        "<h style='color:green;'>" + hits + ": </h>" +
+                        "<m style='color:red;'>" + misses + "</m>";
                 if (testLen < 0) {
                     //test is over
                     console.log("Test is over");
@@ -625,9 +624,10 @@
         evalFunction = new Function("obj", JSON_object.eval_function);
         var i = 0;
         var test_data = [];
+        var paceFuction;
         test_data = JSON_object.test_data;
         test_data.forEach(function (td, index) {
-            setTimeout(function () {
+            paceFunction = setTimeout(function () {
                 objAsString = JSON.stringify(td);
                 drawCluster(objAsString);
                 console.log("sending " + objAsString + " in " + index * (2000) + " ms");
